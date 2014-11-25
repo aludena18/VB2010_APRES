@@ -1,0 +1,29 @@
+C:\Users\HPDV6000\documents\visual studio 2010\Projects\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\bin\Debug\Proyecto_Lavanderia_Apres.exe
+C:\Users\HPDV6000\documents\visual studio 2010\Projects\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\bin\Debug\Proyecto_Lavanderia_Apres.pdb
+C:\Users\HPDV6000\documents\visual studio 2010\Projects\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\bin\Debug\Proyecto_Lavanderia_Apres.xml
+C:\Users\HPDV6000\documents\visual studio 2010\Projects\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\HPDV6000\documents\visual studio 2010\Projects\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.Form1.resources
+C:\Users\HPDV6000\documents\visual studio 2010\Projects\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\HPDV6000\documents\visual studio 2010\Projects\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\HPDV6000\documents\visual studio 2010\Projects\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\HPDV6000\documents\visual studio 2010\Projects\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\Proyecto_Lavanderia_Apres.exe
+C:\Users\HPDV6000\documents\visual studio 2010\Projects\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\Proyecto_Lavanderia_Apres.xml
+C:\Users\HPDV6000\documents\visual studio 2010\Projects\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\Proyecto_Lavanderia_Apres.pdb
+C:\Users\HPDV6000\documents\visual studio 2010\Projects\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.Tabla.resources
+C:\Users\HPDV6000\documents\visual studio 2010\Projects\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.FormEliminarNota.resources
+C:\Users\HPDV6000\documents\visual studio 2010\Projects\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.Form2.resources
+D:\Proyectos Varios\Visual Basic 2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\Proyecto_Lavanderia_Apres.exe
+D:\Proyectos Varios\Visual Basic 2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\Proyecto_Lavanderia_Apres.xml
+D:\Proyectos Varios\Visual Basic 2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\Proyecto_Lavanderia_Apres.pdb
+D:\Proyectos Varios\Visual Basic 2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\bin\Debug\Proyecto_Lavanderia_Apres.exe
+D:\Proyectos Varios\Visual Basic 2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\bin\Debug\Proyecto_Lavanderia_Apres.pdb
+D:\Proyectos Varios\Visual Basic 2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\bin\Debug\Proyecto_Lavanderia_Apres.xml
+D:\Proyectos Varios\Visual Basic 2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Proyectos Varios\Visual Basic 2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.Form1.resources
+D:\Proyectos Varios\Visual Basic 2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.Form2.resources
+D:\Proyectos Varios\Visual Basic 2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.FormEliminarNota.resources
+D:\Proyectos Varios\Visual Basic 2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.Resources.resources
+D:\Proyectos Varios\Visual Basic 2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.Tabla.resources
+D:\Proyectos Varios\Visual Basic 2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Proyectos Varios\Visual Basic 2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Proyectos Varios\Visual Basic 2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.Usuario.resources

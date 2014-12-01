@@ -11,28 +11,18 @@ Public Class Form1
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        Dim ruta As String
-
         Usuario.Hide()
-
 
         obj.rellenaComboBox(Me.ComboBox2)
         obj.rellenaComboBox(Me.ComboBox3)
         obj.rellenaComboBox(Me.ComboBox4)
-
-        'ruta = Mid(Application.StartupPath, 1, 3)
-        'ruta = ruta + "BDACCES\DBAPRES.mdb"
-
-        'ruta = "..\ApresDB.mdb"
-        'Module1.miconexion.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + ruta + ";Persist Security Info=False"
-        'miconexion.Open()
 
         obj.obtenerUltimoReg(Module1.miconexion, Me.DataGridView1)
         ultimoRegistro = Me.DataGridView1.CurrentCell.Value
         'MessageBox.Show(ultimoRegistro)
         cuentaNota = ultimoRegistro + 1
         Me.lblNotaId.Text = cuentaNota
-
+        Me.lblUsuario.Text = nombreUsuario
     End Sub
 
     Private Sub txtTelefono_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTelefono.KeyPress

@@ -24,6 +24,9 @@ Public Class Metodo
     Dim wDetalle4 As String
     Dim wCantidad4 As String
 
+    Dim wUserDni As String
+    Dim wUserNombre As String
+
     Public Property Id() As String
         Get
             Return wId
@@ -204,6 +207,24 @@ Public Class Metodo
         End Set
     End Property
 
+    Public Property UserDni() As String
+        Get
+            Return wUserDni
+        End Get
+        Set(ByVal value As String)
+            wUserDni = value
+        End Set
+    End Property
+
+    Public Property UserNombre() As String
+        Get
+            Return wUserNombre
+        End Get
+        Set(ByVal value As String)
+            wUserNombre = value
+        End Set
+    End Property
+
     Public Sub CargarGrid(ByVal conex As OleDbConnection, ByRef MiGrid As DataGridView)
 
         Dim Tablita As New System.Data.DataTable()
@@ -280,29 +301,29 @@ Public Class Metodo
 
         vSQL = "INSERT INTO Tabla VALUES("
         vSQL = vSQL + Me.Id + ",'"
-        vSQL = vSQL + Me.wNombre + "','"
-        vSQL = vSQL + Me.wDireccion + "','"
-        vSQL = vSQL + Me.wTelefono + "','"
-        vSQL = vSQL + Me.wDni + "','"
-        vSQL = vSQL + Me.wRecepcion + "','"
-        vSQL = vSQL + Me.wEntrega + "','"
-        vSQL = vSQL + Me.wHora + "','"
+        vSQL = vSQL + Me.Nombre + "','"
+        vSQL = vSQL + Me.Direccion + "','"
+        vSQL = vSQL + Me.Telefono + "','"
+        vSQL = vSQL + Me.Dni + "','"
+        vSQL = vSQL + Me.Recepcion + "','"
+        vSQL = vSQL + Me.Entrega + "','"
+        vSQL = vSQL + Me.Hora + "','"
 
-        vSQL = vSQL + Me.wPrenda1 + "','"
-        vSQL = vSQL + Me.wDetalle1 + "','"
-        vSQL = vSQL + Me.wCantidad1 + "','"
+        vSQL = vSQL + Me.Prenda1 + "','"
+        vSQL = vSQL + Me.Detalle1 + "','"
+        vSQL = vSQL + Me.Cantidad1 + "','"
 
-        vSQL = vSQL + Me.wPrenda2 + "','"
-        vSQL = vSQL + Me.wDetalle2 + "','"
-        vSQL = vSQL + Me.wCantidad2 + "','"
+        vSQL = vSQL + Me.Prenda2 + "','"
+        vSQL = vSQL + Me.Detalle2 + "','"
+        vSQL = vSQL + Me.Cantidad2 + "','"
 
-        vSQL = vSQL + Me.wPrenda3 + "','"
-        vSQL = vSQL + Me.wDetalle3 + "','"
-        vSQL = vSQL + Me.wCantidad3 + "','"
+        vSQL = vSQL + Me.Prenda3 + "','"
+        vSQL = vSQL + Me.Detalle3 + "','"
+        vSQL = vSQL + Me.Cantidad3 + "','"
 
-        vSQL = vSQL + Me.wPrenda4 + "','"
-        vSQL = vSQL + Me.wDetalle4 + "','"
-        vSQL = vSQL + Me.wCantidad4 + "')"
+        vSQL = vSQL + Me.Prenda4 + "','"
+        vSQL = vSQL + Me.Detalle4 + "','"
+        vSQL = vSQL + Me.Cantidad4 + "')"
 
 
         comando.Connection = conex
@@ -313,7 +334,6 @@ Public Class Metodo
     End Sub
 
     Public Sub BuscarNota(ByVal conex As OleDbConnection, ByRef MiGrid As DataGridView)
-
         Dim Tablita As New System.Data.DataTable()
         Dim cadena As String
         cadena = "Select * from Tabla WHERE Id="
@@ -333,6 +353,17 @@ Public Class Metodo
         MiGrid.Columns(13).Width = 60
         MiGrid.Columns(16).Width = 60
         MiGrid.Columns(19).Width = 60
+    End Sub
+
+    Public Sub Login(ByVal conex As OleDbConnection, ByRef MiGrilla As DataGridView)
+        Dim Tabla As New System.Data.DataTable()
+        Dim cadena As String
+        cadena = "Select * from Usuario where Id =" + Me.wUserDni
+        Dim Tramitador As New OleDbDataAdapter(cadena, conex)
+        Dim Comoda As New System.Data.DataSet()
+        Tramitador.Fill(Comoda, "Usuario")
+        Tabla = Comoda.Tables(0)
+        MiGrilla.DataSource = Tabla
     End Sub
 
     Public Sub Eliminar(ByVal conex As OleDbConnection)

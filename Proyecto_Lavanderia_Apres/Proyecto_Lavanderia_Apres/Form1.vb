@@ -97,10 +97,12 @@ Public Class Form1
     End Sub
 
     Private Sub btnLimpiaBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLimpiaBox1.Click
-        Me.txtTablaDetalle1.Text = ""
-        detalleString1 = ""
-        Me.ComboBox1.Items.Clear()
-        obj.rellenaComboBox(Me.ComboBox1)
+        CheckBox.Show()
+
+        'Me.txtTablaDetalle1.Text = ""
+        'detalleString1 = ""
+        'Me.ComboBox1.Items.Clear()
+        'obj.rellenaComboBox(Me.ComboBox1)
     End Sub
 
     Private Sub btnLimpiaBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLimpiaBox2.Click

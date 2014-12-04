@@ -1,13 +1,21 @@
 ﻿Public Class CheckBox
     Dim cadenaDetalle As String
+    Dim obj As Metodo
+
+    Dim localChk(7) As Boolean
 
 
     Private Sub CheckBox_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        localChk(0) = obj.Chk0
+        localChk(1) = obj.Chk1
+        localChk(2) = obj.Chk2
+
 
     End Sub
 
     Private Sub btnChbAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnChbAceptar.Click
         Dim indice As Integer
+
         cadenaDetalle = ""
         
         For indice = 0 To Me.CheckedListBox1.Items.Count - 1

@@ -27,6 +27,10 @@ Public Class Metodo
     Dim wUserDni As String
     Dim wUserNombre As String
 
+    Dim wChk0 As Boolean
+    Dim wChk1 As Boolean
+    Dim wChk2 As Boolean
+
     Public Property Id() As String
         Get
             Return wId
@@ -222,6 +226,33 @@ Public Class Metodo
         End Get
         Set(ByVal value As String)
             wUserNombre = value
+        End Set
+    End Property
+
+    Public Property Chk0() As Boolean
+        Get
+            Return wChk0
+        End Get
+        Set(ByVal value As Boolean)
+            wChk0 = value
+        End Set
+    End Property
+
+    Public Property Chk1() As Boolean
+        Get
+            Return wChk1
+        End Get
+        Set(ByVal value As Boolean)
+            wChk1 = value
+        End Set
+    End Property
+
+    Public Property Chk2() As Boolean
+        Get
+            Return wChk2
+        End Get
+        Set(ByVal value As Boolean)
+            wChk2 = value
         End Set
     End Property
 

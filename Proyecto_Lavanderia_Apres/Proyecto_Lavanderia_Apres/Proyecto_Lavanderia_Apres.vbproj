@@ -100,6 +100,7 @@
     <Compile Include="FormEliminarNota.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="LblChkBoxList.vb" />
     <Compile Include="Metodo.vb" />
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

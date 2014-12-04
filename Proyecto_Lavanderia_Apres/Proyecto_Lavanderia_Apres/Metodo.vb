@@ -27,9 +27,8 @@ Public Class Metodo
     Dim wUserDni As String
     Dim wUserNombre As String
 
-    Dim wChk0 As Boolean
-    Dim wChk1 As Boolean
-    Dim wChk2 As Boolean
+    Dim wLabel As String
+    Dim wIndiceDetalle As Integer
 
     Public Property Id() As String
         Get
@@ -229,30 +228,21 @@ Public Class Metodo
         End Set
     End Property
 
-    Public Property Chk0() As Boolean
+    Public Property LabelCheckBox() As String
         Get
-            Return wChk0
+            Return wLabel
         End Get
-        Set(ByVal value As Boolean)
-            wChk0 = value
+        Set(ByVal value As String)
+            wLabel = value
         End Set
     End Property
 
-    Public Property Chk1() As Boolean
+    Public Property IndiceDetalle() As Integer
         Get
-            Return wChk1
+            Return wIndiceDetalle
         End Get
-        Set(ByVal value As Boolean)
-            wChk1 = value
-        End Set
-    End Property
-
-    Public Property Chk2() As Boolean
-        Get
-            Return wChk2
-        End Get
-        Set(ByVal value As Boolean)
-            wChk2 = value
+        Set(ByVal value As Integer)
+            wIndiceDetalle = value
         End Set
     End Property
 
@@ -276,26 +266,6 @@ Public Class Metodo
         MiGrid.Columns(13).Width = 60
         MiGrid.Columns(16).Width = 60
         MiGrid.Columns(19).Width = 60
-        'MiGrid.Columns(1).HeaderText = "Nombre"
-        'MiGrid.Columns(2).HeaderText = "Direccion"
-        'MiGrid.Columns(3).HeaderText = "Telefono"
-        'MiGrid.Columns(4).HeaderText = "DNI"
-        'MiGrid.Columns(5).HeaderText = "Recepcion"
-        'MiGrid.Columns(6).HeaderText = "Entrega"
-        'MiGrid.Columns(7).HeaderText = "Hora"
-        'MiGrid.Columns(8).HeaderText = "Prenda1"
-        'MiGrid.Columns(9).HeaderText = "Detalle1"
-        'MiGrid.Columns(10).HeaderText = "Cantidad1"
-        'MiGrid.Columns(11).HeaderText = "Prenda2"
-        'MiGrid.Columns(12).HeaderText = "Detalle2"
-        'MiGrid.Columns(13).HeaderText = "Cantidad2"
-        'MiGrid.Columns(14).HeaderText = "Prenda3"
-        'MiGrid.Columns(15).HeaderText = "Detalle3"
-        'MiGrid.Columns(16).HeaderText = "Cantidad3"
-        'MiGrid.Columns(17).HeaderText = "Prenda4"
-        'MiGrid.Columns(18).HeaderText = "Detalle4"
-        'MiGrid.Columns(19).HeaderText = "Cantidad4"
-
     End Sub
 
     Public Sub obtenerUltimoReg(ByVal conex As OleDbConnection, ByRef miGrilla As DataGridView)
@@ -312,17 +282,6 @@ Public Class Metodo
         miGrilla.Columns(0).HeaderText = "Nota"
         miGrilla.Columns(0).Width = 40
 
-    End Sub
-
-    Public Sub rellenaComboBox(ByRef comboBox As ComboBox)
-        comboBox.Items.Add("|Decolorido| ")
-        comboBox.Items.Add("|Roto| ")
-        comboBox.Items.Add("|Botones| ")
-        comboBox.Items.Add("|Picado|")
-        comboBox.Items.Add("|Mancahdo| ")
-        comboBox.Items.Add("|Gastado| ")
-        comboBox.Items.Add("|Brillo| ")
-        comboBox.Items.Add("|Hilos Jalados| ")
     End Sub
 
     Public Sub Ingresar(ByVal conex As OleDbConnection)
@@ -356,7 +315,6 @@ Public Class Metodo
         vSQL = vSQL + Me.Detalle4 + "','"
         vSQL = vSQL + Me.Cantidad4 + "')"
 
-
         comando.Connection = conex
         comando.CommandText = vSQL
         comando.CommandType = CommandType.Text
@@ -368,7 +326,7 @@ Public Class Metodo
         Dim Tablita As New System.Data.DataTable()
         Dim cadena As String
         cadena = "Select * from Tabla WHERE Id="
-        cadena = cadena + Me.wId
+        cadena = cadena + Me.Id
         'cadena = "Select max(Id) from Tabla"
         Dim tramitador As New OleDbDataAdapter(cadena, conex)
         Dim comoda As New System.Data.DataSet()
@@ -386,17 +344,6 @@ Public Class Metodo
         MiGrid.Columns(19).Width = 60
     End Sub
 
-    Public Sub Login(ByVal conex As OleDbConnection, ByRef MiGrilla As DataGridView)
-        Dim Tabla As New System.Data.DataTable()
-        Dim cadena As String
-        cadena = "Select * from Usuario where Id =" + Me.wUserDni
-        Dim Tramitador As New OleDbDataAdapter(cadena, conex)
-        Dim Comoda As New System.Data.DataSet()
-        Tramitador.Fill(Comoda, "Usuario")
-        Tabla = Comoda.Tables(0)
-        MiGrilla.DataSource = Tabla
-    End Sub
-
     Public Sub Eliminar(ByVal conex As OleDbConnection)
 
         Dim vsql As String
@@ -410,6 +357,28 @@ Public Class Metodo
         comando.CommandType = CommandType.Text
         comando.ExecuteNonQuery()
 
+    End Sub
+
+    Public Sub Login(ByVal conex As OleDbConnection, ByRef MiGrilla As DataGridView)
+        Dim Tabla As New System.Data.DataTable()
+        Dim cadena As String
+        cadena = "Select * from Usuario where Id =" + Me.wUserDni
+        Dim Tramitador As New OleDbDataAdapter(cadena, conex)
+        Dim Comoda As New System.Data.DataSet()
+        Tramitador.Fill(Comoda, "Usuario")
+        Tabla = Comoda.Tables(0)
+        MiGrilla.DataSource = Tabla
+    End Sub
+
+    Public Sub rellenaComboBox(ByRef comboBox As ComboBox)
+        comboBox.Items.Add("|Decolorido| ")
+        comboBox.Items.Add("|Roto| ")
+        comboBox.Items.Add("|Botones| ")
+        comboBox.Items.Add("|Picado|")
+        comboBox.Items.Add("|Mancahdo| ")
+        comboBox.Items.Add("|Gastado| ")
+        comboBox.Items.Add("|Brillo| ")
+        comboBox.Items.Add("|Hilos Jalados| ")
     End Sub
 
 End Class

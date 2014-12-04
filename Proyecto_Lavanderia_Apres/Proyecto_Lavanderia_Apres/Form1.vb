@@ -97,7 +97,7 @@ Public Class Form1
     End Sub
 
     Private Sub btnLimpiaBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLimpiaBox1.Click
-
+        obj.LabelCheckBox = "DETALLE 1".ToString
         CheckBox.Show()
 
 

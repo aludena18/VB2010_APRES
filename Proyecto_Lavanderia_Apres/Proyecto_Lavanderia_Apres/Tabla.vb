@@ -79,4 +79,6 @@ Public Class Tabla
     Private Sub EliminarNotaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EliminarNotaToolStripMenuItem.Click
         FormEliminarNota.Show()
     End Sub
+
+   
 End Class

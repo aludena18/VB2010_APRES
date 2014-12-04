@@ -1,14 +1,12 @@
 ﻿Public Class CheckBox
     Dim cadenaDetalle As String
-    Dim obj As Metodo
-
-    Dim localChk(7) As Boolean
-
+    Dim objeto As Metodo
 
     Private Sub CheckBox_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        localChk(0) = obj.Chk0
-        localChk(1) = obj.Chk1
-        localChk(2) = obj.Chk2
+
+
+
+        MessageBox.Show("")
 
 
     End Sub

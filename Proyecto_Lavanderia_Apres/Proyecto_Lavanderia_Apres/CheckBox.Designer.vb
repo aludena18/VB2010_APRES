@@ -25,6 +25,7 @@ Partial Class CheckBox
         Me.btnChbAceptar = New System.Windows.Forms.Button()
         Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblCheckBoxList = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnChbAceptar
@@ -49,17 +50,27 @@ Partial Class CheckBox
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(24, 32)
+        Me.Label1.Location = New System.Drawing.Point(24, 51)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(109, 13)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Selecciona la opcion:"
         '
+        'lblCheckBoxList
+        '
+        Me.lblCheckBoxList.AutoSize = True
+        Me.lblCheckBoxList.Location = New System.Drawing.Point(24, 19)
+        Me.lblCheckBoxList.Name = "lblCheckBoxList"
+        Me.lblCheckBoxList.Size = New System.Drawing.Size(16, 13)
+        Me.lblCheckBoxList.TabIndex = 13
+        Me.lblCheckBoxList.Text = "..."
+        '
         'CheckBox
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(193, 263)
+        Me.ClientSize = New System.Drawing.Size(235, 263)
+        Me.Controls.Add(Me.lblCheckBoxList)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CheckedListBox1)
         Me.Controls.Add(Me.btnChbAceptar)
@@ -72,4 +83,5 @@ Partial Class CheckBox
     Friend WithEvents btnChbAceptar As System.Windows.Forms.Button
     Friend WithEvents CheckedListBox1 As System.Windows.Forms.CheckedListBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblCheckBoxList As System.Windows.Forms.Label
 End Class

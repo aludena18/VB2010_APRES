@@ -370,16 +370,7 @@ Public Class Metodo
         MiGrilla.DataSource = Tabla
     End Sub
 
-    Public Sub rellenaComboBox(ByRef comboBox As ComboBox)
-        comboBox.Items.Add("|Decolorido| ")
-        comboBox.Items.Add("|Roto| ")
-        comboBox.Items.Add("|Botones| ")
-        comboBox.Items.Add("|Picado|")
-        comboBox.Items.Add("|Mancahdo| ")
-        comboBox.Items.Add("|Gastado| ")
-        comboBox.Items.Add("|Brillo| ")
-        comboBox.Items.Add("|Hilos Jalados| ")
-    End Sub
+    
 
 End Class
 

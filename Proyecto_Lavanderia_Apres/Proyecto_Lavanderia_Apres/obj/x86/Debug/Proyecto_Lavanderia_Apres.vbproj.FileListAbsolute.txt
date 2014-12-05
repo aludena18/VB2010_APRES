@@ -58,3 +58,4 @@ C:\Users\TECNICA\Documents\Visual Studio 2010\Projects\Apres\Proyecto_Lavanderia
 C:\Users\TECNICA\Documents\Visual Studio 2010\Projects\Apres\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\TECNICA\Documents\Visual Studio 2010\Projects\Apres\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\TECNICA\Documents\Visual Studio 2010\Projects\Apres\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.CheckBox.resources
+C:\Users\HPdv6000\Documents\Visual Studio 2010\Projects\apres\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.CheckBox.resources

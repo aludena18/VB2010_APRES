@@ -13,10 +13,6 @@ Public Class Form1
 
         Usuario.Hide()
 
-        obj.rellenaComboBox(Me.ComboBox2)
-        obj.rellenaComboBox(Me.ComboBox3)
-        obj.rellenaComboBox(Me.ComboBox4)
-
         obj.obtenerUltimoReg(Module1.miconexion, Me.DataGridView1)
         ultimoRegistro = Me.DataGridView1.CurrentCell.Value
         'MessageBox.Show(ultimoRegistro)
@@ -55,81 +51,32 @@ Public Class Form1
         End If
     End Sub
 
-
     Private Sub BuscarToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuscarToolStripMenuItem.Click
         Tabla.Show()
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
-        Dim indice As Integer
-        indice = Me.ComboBox1.SelectedIndex
-        detalleString1 = detalleString1 + Me.ComboBox1.SelectedItem
-        Me.txtTablaDetalle1.Text = detalleString1
-        Me.ComboBox1.SelectedText = ""
-        Me.ComboBox1.Items.RemoveAt(indice)
-    End Sub
-    
-    Private Sub ComboBox2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox2.SelectedIndexChanged
-        Dim indice As Integer
-        indice = Me.ComboBox2.SelectedIndex
-        detalleString2 = detalleString2 + Me.ComboBox2.SelectedItem
-        Me.txtTablaDetalle2.Text = detalleString2
-        Me.ComboBox2.SelectedText = ""
-        Me.ComboBox2.Items.RemoveAt(indice)
-    End Sub
-
-    Private Sub ComboBox3_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox3.SelectedIndexChanged
-        Dim indice As Integer
-        indice = Me.ComboBox3.SelectedIndex
-        detalleString3 = detalleString3 + Me.ComboBox3.SelectedItem
-        Me.txtTablaDetalle3.Text = detalleString3
-        Me.ComboBox3.SelectedText = ""
-        Me.ComboBox3.Items.RemoveAt(indice)
-    End Sub
-
-    Private Sub ComboBox4_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox4.SelectedIndexChanged
-        Dim indice As Integer
-        indice = Me.ComboBox4.SelectedIndex
-        detalleString4 = detalleString4 + Me.ComboBox4.SelectedItem
-        Me.txtTablaDetalle4.Text = detalleString4
-        Me.ComboBox4.SelectedText = ""
-        Me.ComboBox4.Items.RemoveAt(indice)
-    End Sub
-
     Private Sub btnLimpiaBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLimpiaBox1.Click
-        obj.LabelCheckBox = "DETALLE 1".ToString
+        objetoPublico.LabelCheckBox = "DETALLE 1"
+        objetoPublico.IndiceDetalle = 1
         CheckBox.Show()
-
-
-        'Me.txtTablaDetalle1.Text = ""
-        'detalleString1 = ""
-        'Me.ComboBox1.Items.Clear()
-        'obj.rellenaComboBox(Me.ComboBox1)
     End Sub
 
     Private Sub btnLimpiaBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLimpiaBox2.Click
-
+        objetoPublico.LabelCheckBox = "DETALLE 2"
+        objetoPublico.IndiceDetalle = 2
         CheckBox.Show()
-
-
-        'Me.txtTablaDetalle2.Text = ""
-        'detalleString2 = ""
-        'Me.ComboBox2.Items.Clear()
-        'obj.rellenaComboBox(Me.ComboBox2)
     End Sub
 
     Private Sub btnLimpiaBox3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLimpiaBox3.Click
-        Me.txtTablaDetalle3.Text = ""
-        detalleString3 = ""
-        Me.ComboBox3.Items.Clear()
-        obj.rellenaComboBox(Me.ComboBox3)
+        objetoPublico.LabelCheckBox = "DETALLE 3"
+        objetoPublico.IndiceDetalle = 3
+        CheckBox.Show()
     End Sub
 
     Private Sub btnLimpiaBox4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnLimpiaBox4.Click
-        Me.txtTablaDetalle4.Text = ""
-        detalleString4 = ""
-        Me.ComboBox4.Items.Clear()
-        obj.rellenaComboBox(Me.ComboBox4)
+        objetoPublico.LabelCheckBox = "DETALLE 4"
+        objetoPublico.IndiceDetalle = 4
+        CheckBox.Show()
     End Sub
 
     Private Sub btnGrabar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)

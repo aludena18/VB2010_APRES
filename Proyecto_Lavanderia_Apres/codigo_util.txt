@@ -1,0 +1,35 @@
+COMBOBOX
+- Para Seleccionar un item y borrarlo de la lista
+
+Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Dim indice As Integer
+        indice = Me.ComboBox1.SelectedIndex
+        detalleString1 = detalleString1 + Me.ComboBox1.SelectedItem
+        Me.txtTablaDetalle1.Text = detalleString1
+        Me.ComboBox1.SelectedText = ""
+        Me.ComboBox1.Items.RemoveAt(indice)
+    End Sub
+
+
+---------------------------------------------------------------------
+
+-metodo en un public class para rellenar n combobox
+
+Public Sub rellenaComboBox(ByRef comboBox As ComboBox)
+        comboBox.Items.Add("|Decolorido| ")
+        comboBox.Items.Add("|Roto| ")
+        comboBox.Items.Add("|Botones| ")
+        comboBox.Items.Add("|Picado|")
+        comboBox.Items.Add("|Mancahdo| ")
+        comboBox.Items.Add("|Gastado| ")
+        comboBox.Items.Add("|Brillo| ")
+        comboBox.Items.Add("|Hilos Jalados| ")
+    End Sub
+
+----------------------------------------------------------------------
+
+-invocando el metodo para llenar los combobox
+
+	obj.rellenaComboBox(Me.ComboBox2)
+        obj.rellenaComboBox(Me.ComboBox3)
+        obj.rellenaComboBox(Me.ComboBox4)

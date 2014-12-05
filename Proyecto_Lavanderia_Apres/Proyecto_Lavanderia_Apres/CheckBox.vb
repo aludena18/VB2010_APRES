@@ -1,14 +1,11 @@
 ﻿Public Class CheckBox
     Dim cadenaDetalle As String
-    Dim objeto As Metodo
+    Dim obj As New Metodo
+    Dim indDetalle As Integer
 
     Private Sub CheckBox_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-
-
-        MessageBox.Show("")
-
-
+        Me.lblCheckBoxList.Text = objetoPublico.LabelCheckBox
+        indDetalle = objetoPublico.IndiceDetalle
     End Sub
 
     Private Sub btnChbAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnChbAceptar.Click
@@ -41,7 +38,20 @@
             End If
         Next
 
-        MessageBox.Show(cadenaDetalle)
+        'MessageBox.Show(cadenaDetalle)
+        Select Case indDetalle
+            Case 1
+                Form1.txtTablaDetalle1.Text = cadenaDetalle
+            Case 2
+                Form1.txtTablaDetalle2.Text = cadenaDetalle
+            Case 3
+                Form1.txtTablaDetalle3.Text = cadenaDetalle
+            Case 4
+                Form1.txtTablaDetalle4.Text = cadenaDetalle
+        End Select
+
+        Me.Close()
+
 
     End Sub
 End Class

@@ -3,4 +3,5 @@
     Public ultimoRegistro As String
     Public nombreUsuario As String
 
+    Public objetoPublico As New Metodo
 End Module

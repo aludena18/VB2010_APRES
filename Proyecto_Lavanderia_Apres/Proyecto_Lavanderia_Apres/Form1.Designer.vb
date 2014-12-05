@@ -306,7 +306,7 @@ Partial Class Form1
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.56291!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.43709!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 402.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label11, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txtTablaDetalle1, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.txtTablaDetalle2, 2, 2)
@@ -338,7 +338,7 @@ Partial Class Form1
         '
         Me.Label11.BackColor = System.Drawing.Color.White
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(317, 1)
+        Me.Label11.Location = New System.Drawing.Point(315, 1)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(395, 34)
         Me.Label11.TabIndex = 42
@@ -352,7 +352,7 @@ Partial Class Form1
         Me.txtTablaDetalle1.Enabled = False
         Me.txtTablaDetalle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTablaDetalle1.ForeColor = System.Drawing.Color.Black
-        Me.txtTablaDetalle1.Location = New System.Drawing.Point(317, 39)
+        Me.txtTablaDetalle1.Location = New System.Drawing.Point(315, 39)
         Me.txtTablaDetalle1.Multiline = True
         Me.txtTablaDetalle1.Name = "txtTablaDetalle1"
         Me.txtTablaDetalle1.Size = New System.Drawing.Size(395, 28)
@@ -365,7 +365,7 @@ Partial Class Form1
         Me.txtTablaDetalle2.Enabled = False
         Me.txtTablaDetalle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTablaDetalle2.ForeColor = System.Drawing.Color.Black
-        Me.txtTablaDetalle2.Location = New System.Drawing.Point(317, 74)
+        Me.txtTablaDetalle2.Location = New System.Drawing.Point(315, 74)
         Me.txtTablaDetalle2.Multiline = True
         Me.txtTablaDetalle2.Name = "txtTablaDetalle2"
         Me.txtTablaDetalle2.Size = New System.Drawing.Size(395, 28)
@@ -378,7 +378,7 @@ Partial Class Form1
         Me.txtTablaDetalle3.Enabled = False
         Me.txtTablaDetalle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTablaDetalle3.ForeColor = System.Drawing.Color.Black
-        Me.txtTablaDetalle3.Location = New System.Drawing.Point(317, 109)
+        Me.txtTablaDetalle3.Location = New System.Drawing.Point(315, 109)
         Me.txtTablaDetalle3.Multiline = True
         Me.txtTablaDetalle3.Name = "txtTablaDetalle3"
         Me.txtTablaDetalle3.Size = New System.Drawing.Size(395, 28)
@@ -391,7 +391,7 @@ Partial Class Form1
         Me.txtTablaDetalle4.Enabled = False
         Me.txtTablaDetalle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTablaDetalle4.ForeColor = System.Drawing.Color.Black
-        Me.txtTablaDetalle4.Location = New System.Drawing.Point(317, 144)
+        Me.txtTablaDetalle4.Location = New System.Drawing.Point(315, 144)
         Me.txtTablaDetalle4.Multiline = True
         Me.txtTablaDetalle4.Name = "txtTablaDetalle4"
         Me.txtTablaDetalle4.Size = New System.Drawing.Size(395, 31)
@@ -403,7 +403,7 @@ Partial Class Form1
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(53, 1)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(257, 34)
+        Me.Label10.Size = New System.Drawing.Size(255, 34)
         Me.Label10.TabIndex = 41
         Me.Label10.Text = "PRENDA"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -428,7 +428,7 @@ Partial Class Form1
         Me.txtTablaPrenda1.Location = New System.Drawing.Point(53, 39)
         Me.txtTablaPrenda1.Multiline = True
         Me.txtTablaPrenda1.Name = "txtTablaPrenda1"
-        Me.txtTablaPrenda1.Size = New System.Drawing.Size(257, 28)
+        Me.txtTablaPrenda1.Size = New System.Drawing.Size(255, 28)
         Me.txtTablaPrenda1.TabIndex = 9
         Me.txtTablaPrenda1.Text = "Toallas"
         '
@@ -441,7 +441,7 @@ Partial Class Form1
         Me.txtTablaPrenda2.Location = New System.Drawing.Point(53, 74)
         Me.txtTablaPrenda2.Multiline = True
         Me.txtTablaPrenda2.Name = "txtTablaPrenda2"
-        Me.txtTablaPrenda2.Size = New System.Drawing.Size(257, 28)
+        Me.txtTablaPrenda2.Size = New System.Drawing.Size(255, 28)
         Me.txtTablaPrenda2.TabIndex = 11
         '
         'txtTablaCant2
@@ -466,7 +466,7 @@ Partial Class Form1
         Me.txtTablaPrenda3.Location = New System.Drawing.Point(53, 109)
         Me.txtTablaPrenda3.Multiline = True
         Me.txtTablaPrenda3.Name = "txtTablaPrenda3"
-        Me.txtTablaPrenda3.Size = New System.Drawing.Size(257, 28)
+        Me.txtTablaPrenda3.Size = New System.Drawing.Size(255, 28)
         Me.txtTablaPrenda3.TabIndex = 13
         '
         'txtTablaCant3
@@ -491,7 +491,7 @@ Partial Class Form1
         Me.txtTablaPrenda4.Location = New System.Drawing.Point(53, 144)
         Me.txtTablaPrenda4.Multiline = True
         Me.txtTablaPrenda4.Name = "txtTablaPrenda4"
-        Me.txtTablaPrenda4.Size = New System.Drawing.Size(257, 31)
+        Me.txtTablaPrenda4.Size = New System.Drawing.Size(255, 31)
         Me.txtTablaPrenda4.TabIndex = 15
         '
         'txtTablaCant4
@@ -669,7 +669,7 @@ Partial Class Form1
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton4, Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripSeparator3, Me.ToolStripButton5, Me.ToolStripButton3})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton4, Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripSeparator3, Me.ToolStripButton3, Me.ToolStripButton5})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(814, 25)

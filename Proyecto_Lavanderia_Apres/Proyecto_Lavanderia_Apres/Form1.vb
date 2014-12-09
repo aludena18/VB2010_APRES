@@ -142,54 +142,52 @@ Public Class Form1
         e.Graphics.DrawString("Teléfono: " + Me.txtTelefono.Text, VerdanaMedium, Brushes.Black, 50, 210)
         e.Graphics.DrawString("Fecha de Entrega: " + Me.dtpFechaEntrega.Text, VerdanaMedium, Brushes.Black, 50, 230)
 
-        e.Graphics.DrawRectangle(Pens.Black, 50, 270, 30, 30)   'ITEM
-        e.Graphics.DrawRectangle(Pens.Black, 80, 270, 250, 30)  'PRENDA 
-        e.Graphics.DrawRectangle(Pens.Black, 330, 270, 50, 30)  'CANTIDAD
-        e.Graphics.DrawRectangle(Pens.Black, 380, 270, 430, 30) 'DETALLE
+        'CABECERA
+        e.Graphics.DrawRectangle(Pens.Black, 50, 270, 50, 30)  'CANTIDAD
+        e.Graphics.DrawRectangle(Pens.Black, 100, 270, 250, 30)  'PRENDA 
+        e.Graphics.DrawRectangle(Pens.Black, 350, 270, 430, 30) 'DETALLE
 
-        e.Graphics.DrawRectangle(Pens.Black, 50, 300, 30, 30)   'ITEM
-        e.Graphics.DrawRectangle(Pens.Black, 80, 300, 250, 30)  'PRENDA 
-        e.Graphics.DrawRectangle(Pens.Black, 330, 300, 50, 30)  'CANTIDAD
-        e.Graphics.DrawRectangle(Pens.Black, 380, 300, 430, 30) 'DETALLE
+        '1ERA FILA
+        e.Graphics.DrawRectangle(Pens.Black, 50, 300, 50, 30)  'CANTIDAD
+        e.Graphics.DrawRectangle(Pens.Black, 100, 300, 250, 30)  'PRENDA 
+        e.Graphics.DrawRectangle(Pens.Black, 350, 300, 430, 30) 'DETALLE
 
-        e.Graphics.DrawRectangle(Pens.Black, 50, 330, 30, 30)   'ITEM
-        e.Graphics.DrawRectangle(Pens.Black, 80, 330, 250, 30)  'PRENDA 
-        e.Graphics.DrawRectangle(Pens.Black, 330, 330, 50, 30)  'CANTIDAD
-        e.Graphics.DrawRectangle(Pens.Black, 380, 330, 430, 30) 'DETALLE
+        '2DA FILA
+        e.Graphics.DrawRectangle(Pens.Black, 50, 330, 50, 30)  'CANTIDAD
+        e.Graphics.DrawRectangle(Pens.Black, 100, 330, 250, 30)  'PRENDA 
+        e.Graphics.DrawRectangle(Pens.Black, 350, 330, 430, 30) 'DETALLE
 
-        e.Graphics.DrawRectangle(Pens.Black, 50, 360, 30, 30)   'ITEM
-        e.Graphics.DrawRectangle(Pens.Black, 80, 360, 250, 30)  'PRENDA 
-        e.Graphics.DrawRectangle(Pens.Black, 330, 360, 50, 30)  'CANTIDAD
-        e.Graphics.DrawRectangle(Pens.Black, 380, 360, 430, 30) 'DETALLE
+        '3ERA FILA
+        e.Graphics.DrawRectangle(Pens.Black, 50, 360, 50, 30)  'CANTIDAD
+        e.Graphics.DrawRectangle(Pens.Black, 100, 360, 250, 30)  'PRENDA 
+        e.Graphics.DrawRectangle(Pens.Black, 350, 360, 430, 30) 'DETALLE
 
-        e.Graphics.DrawRectangle(Pens.Black, 50, 390, 30, 30)   'ITEM
-        e.Graphics.DrawRectangle(Pens.Black, 80, 390, 250, 30)  'PRENDA 
-        e.Graphics.DrawRectangle(Pens.Black, 330, 390, 50, 30)  'CANTIDAD
-        e.Graphics.DrawRectangle(Pens.Black, 380, 390, 430, 30) 'DETALLE
+        '4TA FILA
+        e.Graphics.DrawRectangle(Pens.Black, 50, 390, 50, 30)  'CANTIDAD
+        e.Graphics.DrawRectangle(Pens.Black, 100, 390, 250, 30)  'PRENDA 
+        e.Graphics.DrawRectangle(Pens.Black, 350, 390, 430, 30) 'DETALLE
 
-        e.Graphics.DrawString("PRENDAS", VerdanaMedium, Brushes.Black, 160, 275)
-        e.Graphics.DrawString("CANT", VerdanaMedium, Brushes.Black, 330, 275)
-        e.Graphics.DrawString("DETALLE", VerdanaMedium, Brushes.Black, 560, 275)
+        e.Graphics.DrawString("CANT", VerdanaMedium, Brushes.Black, 60, 275)
+        e.Graphics.DrawString("PRENDAS", VerdanaMedium, Brushes.Black, 120, 275)
+        e.Graphics.DrawString("DETALLE", VerdanaMedium, Brushes.Black, 360, 275)
 
-        e.Graphics.DrawString("1", VerdanaMedium, Brushes.Black, 60, 305)
-        e.Graphics.DrawString("2", VerdanaMedium, Brushes.Black, 60, 335)
-        e.Graphics.DrawString("3", VerdanaMedium, Brushes.Black, 60, 365)
-        e.Graphics.DrawString("4", VerdanaMedium, Brushes.Black, 60, 395)
+        'CANTIDADES
+        e.Graphics.DrawString(Me.txtTablaCant1.Text, VerdanaMedium, Brushes.Black, 60, 305)
+        e.Graphics.DrawString(Me.txtTablaCant1.Text, VerdanaMedium, Brushes.Black, 60, 335)
+        e.Graphics.DrawString(Me.txtTablaCant1.Text, VerdanaMedium, Brushes.Black, 60, 365)
+        e.Graphics.DrawString(Me.txtTablaCant1.Text, VerdanaMedium, Brushes.Black, 60, 395)
 
-        e.Graphics.DrawString(Me.txtTablaPrenda1.Text, VerdanaMedium, Brushes.Black, 85, 305)
-        e.Graphics.DrawString(Me.txtTablaPrenda1.Text, VerdanaMedium, Brushes.Black, 85, 335)
-        e.Graphics.DrawString(Me.txtTablaPrenda1.Text, VerdanaMedium, Brushes.Black, 85, 365)
-        e.Graphics.DrawString(Me.txtTablaPrenda1.Text, VerdanaMedium, Brushes.Black, 85, 395)
+        'PRENDAS
+        e.Graphics.DrawString(Me.txtTablaPrenda1.Text, VerdanaMedium, Brushes.Black, 120, 305)
+        e.Graphics.DrawString(Me.txtTablaPrenda2.Text, VerdanaMedium, Brushes.Black, 120, 335)
+        e.Graphics.DrawString(Me.txtTablaPrenda3.Text, VerdanaMedium, Brushes.Black, 120, 365)
+        e.Graphics.DrawString(Me.txtTablaPrenda4.Text, VerdanaMedium, Brushes.Black, 120, 395)
 
-        e.Graphics.DrawString(Me.txtTablaCant1.Text, VerdanaMedium, Brushes.Black, 335, 305)
-        e.Graphics.DrawString(Me.txtTablaCant1.Text, VerdanaMedium, Brushes.Black, 335, 335)
-        e.Graphics.DrawString(Me.txtTablaCant1.Text, VerdanaMedium, Brushes.Black, 335, 365)
-        e.Graphics.DrawString(Me.txtTablaCant1.Text, VerdanaMedium, Brushes.Black, 335, 395)
-
-        e.Graphics.DrawString(Me.txtTablaPrenda1.Text, VerdanaMedium, Brushes.Black, 385, 305)
-        e.Graphics.DrawString(Me.txtTablaPrenda1.Text, VerdanaMedium, Brushes.Black, 385, 335)
-        e.Graphics.DrawString(Me.txtTablaPrenda1.Text, VerdanaMedium, Brushes.Black, 385, 365)
-        e.Graphics.DrawString(Me.txtTablaPrenda1.Text, VerdanaMedium, Brushes.Black, 385, 395)
+        'DETALLES
+        e.Graphics.DrawString(Me.txtTablaDetalle1.Text, VerdanaMedium, Brushes.Black, 360, 305)
+        e.Graphics.DrawString(Me.txtTablaDetalle2.Text, VerdanaMedium, Brushes.Black, 360, 335)
+        e.Graphics.DrawString(Me.txtTablaDetalle3.Text, VerdanaMedium, Brushes.Black, 360, 365)
+        e.Graphics.DrawString(Me.txtTablaDetalle4.Text, VerdanaMedium, Brushes.Black, 360, 395)
 
 
 

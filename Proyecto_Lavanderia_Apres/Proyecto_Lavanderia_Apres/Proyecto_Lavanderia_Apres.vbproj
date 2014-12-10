@@ -102,6 +102,7 @@
     </Compile>
     <Compile Include="LblChkBoxList.vb" />
     <Compile Include="Metodo.vb" />
+    <Compile Include="Metodo2.vb" />
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

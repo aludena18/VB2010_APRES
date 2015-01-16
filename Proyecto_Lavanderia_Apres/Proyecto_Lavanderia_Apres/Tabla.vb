@@ -4,9 +4,9 @@ Public Class Tabla
     Dim vsql As String
     Dim obj As New Metodo
 
-    Private Sub Tabla_Activated(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Activated
-        obj.CargarGrid(Module1.miconexion, Me.DataGridView1)
-    End Sub
+    'Private Sub Tabla_Activated(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Activated
+    '    obj.CargarGrid(Module1.miconexion, Me.DataGridView1)
+    'End Sub
 
     Private Sub Tabla_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         obj.CargarGrid(Module1.miconexion, Me.DataGridView1)
@@ -22,7 +22,7 @@ Public Class Tabla
             obj.BuscarNota(Module1.miconexion, Me.DataGridView1)
             If Me.DataGridView1.RowCount > 0 Then
                 'MessageBox.Show(Me.DataGridView1.RowCount.ToString)
-                mensaje()
+                'mensaje()
             Else
                 MessageBox.Show("No existe registro de esta Nota de Entrega.")
             End If
@@ -34,31 +34,33 @@ Public Class Tabla
     End Sub
 
     Private Sub mensaje()
-        MessageBox.Show("Nota de Entrega N°    :    " + Me.DataGridView1.SelectedCells(0).Value.ToString + vbCrLf +
+        MessageBox.Show("Nota de Entrega N°: " + Me.DataGridView1.SelectedCells(0).Value.ToString + vbCrLf +
                             vbCrLf +
-                           "Cliente        :  " + Me.DataGridView1.SelectedCells(1).Value.ToString + vbCrLf +
-                           "Dirección    :  " + Me.DataGridView1.SelectedCells(2).Value.ToString + vbCrLf +
-                           "Teléfono     :  " + Me.DataGridView1.SelectedCells(3).Value.ToString + vbCrLf +
+                           "Cliente: " + Me.DataGridView1.SelectedCells(1).Value.ToString + vbCrLf +
+                           "Dirección: " + Me.DataGridView1.SelectedCells(2).Value.ToString + vbCrLf +
+                           "Teléfono: " + Me.DataGridView1.SelectedCells(3).Value.ToString + vbCrLf +
                            vbCrLf +
-                           "Fecha de Recepción   :  " + Me.DataGridView1.SelectedCells(5).Value.ToString + vbCrLf +
-                           "Fecha de Entrega        :  " + Me.DataGridView1.SelectedCells(6).Value.ToString + vbCrLf +
-                           "Hora de Entrega          :  " + Me.DataGridView1.SelectedCells(7).Value.ToString + vbCrLf +
+                           "Fecha de Recepción : " + Me.DataGridView1.SelectedCells(5).Value.ToString + vbCrLf +
+                           "Fecha de Entrega: " + Me.DataGridView1.SelectedCells(6).Value.ToString + vbCrLf +
+                           "Hora de Entrega: " + Me.DataGridView1.SelectedCells(7).Value.ToString + vbCrLf +
                            vbCrLf +
-                           "Prenda 1      :  " + Me.DataGridView1.SelectedCells(8).Value.ToString + vbCrLf +
-                           "Cantidad     :  " + Me.DataGridView1.SelectedCells(10).Value.ToString + vbCrLf +
-                           "Detalle         :  " + Me.DataGridView1.SelectedCells(9).Value.ToString + vbCrLf +
+                           "Prenda 1: " + Me.DataGridView1.SelectedCells(8).Value.ToString + vbCrLf +
+                           "Cantidad: " + Me.DataGridView1.SelectedCells(10).Value.ToString + vbCrLf +
+                           "Detalle: " + Me.DataGridView1.SelectedCells(9).Value.ToString + vbCrLf +
                            vbCrLf +
-                           "Prenda 2      :  " + Me.DataGridView1.SelectedCells(11).Value.ToString + vbCrLf +
-                           "Cantidad     :  " + Me.DataGridView1.SelectedCells(13).Value.ToString + vbCrLf +
-                           "Detalle         :  " + Me.DataGridView1.SelectedCells(12).Value.ToString + vbCrLf +
+                           "Prenda 2: " + Me.DataGridView1.SelectedCells(11).Value.ToString + vbCrLf +
+                           "Cantidad: " + Me.DataGridView1.SelectedCells(13).Value.ToString + vbCrLf +
+                           "Detalle: " + Me.DataGridView1.SelectedCells(12).Value.ToString + vbCrLf +
                            vbCrLf +
-                           "Prenda 3      :  " + Me.DataGridView1.SelectedCells(14).Value.ToString + vbCrLf +
-                           "Cantidad     :  " + Me.DataGridView1.SelectedCells(16).Value.ToString + vbCrLf +
-                           "Detalle         :  " + Me.DataGridView1.SelectedCells(15).Value.ToString + vbCrLf +
+                           "Prenda 3: " + Me.DataGridView1.SelectedCells(14).Value.ToString + vbCrLf +
+                           "Cantidad: " + Me.DataGridView1.SelectedCells(16).Value.ToString + vbCrLf +
+                           "Detalle: " + Me.DataGridView1.SelectedCells(15).Value.ToString + vbCrLf +
                            vbCrLf +
-                           "Prenda 4      :  " + Me.DataGridView1.SelectedCells(17).Value.ToString + vbCrLf +
-                           "Cantidad     :  " + Me.DataGridView1.SelectedCells(19).Value.ToString + vbCrLf +
-                           "Detalle         :  " + Me.DataGridView1.SelectedCells(18).Value.ToString + vbCrLf)
+                           "Prenda 4: " + Me.DataGridView1.SelectedCells(17).Value.ToString + vbCrLf +
+                           "Cantidad: " + Me.DataGridView1.SelectedCells(19).Value.ToString + vbCrLf +
+                           "Detalle: " + Me.DataGridView1.SelectedCells(18).Value.ToString + vbCrLf +
+                           vbCrLf +
+                           "Precio: " + Me.DataGridView1.SelectedCells(20).Value.ToString + vbCrLf)
     End Sub
 
     

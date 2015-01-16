@@ -3,6 +3,9 @@ Public Class Form1
     Dim vsql As String
     Dim obj As New Metodo
     Dim cuentaNota As Integer
+    Dim cuentaSerie As Integer
+    Dim cuentaNotaCadena As String
+    Dim cuentaSerieCadena As String
     Dim detalleString1 As String
     Dim detalleString2 As String
     Dim detalleString3 As String
@@ -17,8 +20,24 @@ Public Class Form1
         ultimoRegistro = Me.DataGridView1.CurrentCell.Value
         'MessageBox.Show(ultimoRegistro)
         cuentaNota = ultimoRegistro + 1
-        Me.lblNotaId.Text = cuentaNota
+
+        Select Case cuentaNota
+            Case Is < 10
+                cuentaNotaCadena = "000" + cuentaNota.ToString
+            Case 10 To 99
+                cuentaNotaCadena = "00" + cuentaNota.ToString
+            Case 100 To 999
+                cuentaNotaCadena = "0" + cuentaNota.ToString
+        End Select
+
+        Me.lblNotaId.Text = cuentaNotaCadena
         Me.lblUsuario.Text = nombreUsuario
+    End Sub
+
+    Private Sub txtDni_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtDni.KeyPress
+        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
+            e.KeyChar = ""
+        End If
     End Sub
 
     Private Sub txtTelefono_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTelefono.KeyPress
@@ -113,7 +132,19 @@ Public Class Form1
     End Sub
 
     Private Sub ToolStripButton4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton4.Click
-        Me.lblNotaId.Text = cuentaNota
+
+        Select Case cuentaNota
+            Case Is < 10
+                cuentaNotaCadena = "000" + cuentaNota.ToString
+            Case 10 To 99
+                cuentaNotaCadena = "00" + cuentaNota.ToString
+            Case 100 To 999
+                cuentaNotaCadena = "0" + cuentaNota.ToString
+        End Select
+
+        Me.lblNotaId.Text = cuentaNotaCadena
+
+        'Me.lblNotaId.Text = cuentaNota
         Me.gbDatosCliente.Enabled = True
         Me.gbFechasHora.Enabled = True
         Me.gbRecepcion.Enabled = True
@@ -198,11 +229,12 @@ Public Class Form1
         ElseIf Me.txtTablaPrenda1.Text = "" Or Me.txtTablaCant1.Text = "" Then
             MessageBox.Show("¡Debe ingresar por lo menos una prenda y su cantidad!")
         Else
+            obj.Serie = "0"
             obj.Id = Me.lblNotaId.Text
             obj.Nombre = Me.txtNombre.Text
             obj.Direccion = Me.txtDireccion.Text
             obj.Telefono = Me.txtTelefono.Text
-            obj.Dni = "-"
+            obj.Dni = Me.txtDni.Text
             obj.Recepcion = Me.dtpFechaRecep.Text
             obj.Entrega = Me.dtpFechaEntrega.Text
             obj.Hora = Me.dtpHora.Text
@@ -210,18 +242,25 @@ Public Class Form1
             obj.Prenda1 = Me.txtTablaPrenda1.Text
             obj.Cantidad1 = Me.txtTablaCant1.Text
             obj.Detalle1 = Me.txtTablaDetalle1.Text
+            obj.Precio1 = Me.txtTablaPrecio1.Text
 
             obj.Prenda2 = Me.txtTablaPrenda2.Text
             obj.Cantidad2 = Me.txtTablaCant2.Text
             obj.Detalle2 = Me.txtTablaDetalle2.Text
+            obj.Precio2 = Me.txtTablaPrecio2.Text
 
             obj.Prenda3 = Me.txtTablaPrenda3.Text
             obj.Cantidad3 = Me.txtTablaCant3.Text
             obj.Detalle3 = Me.txtTablaDetalle3.Text
+            obj.Precio3 = Me.txtTablaPrecio3.Text
 
             obj.Prenda4 = Me.txtTablaPrenda4.Text
             obj.Cantidad4 = Me.txtTablaCant4.Text
             obj.Detalle4 = Me.txtTablaDetalle4.Text
+            obj.Precio4 = Me.txtTablaPrecio4.Text
+
+
+
 
             obj.Ingresar(Module1.miconexion)
             MessageBox.Show("Datos Grabados Correctamente.")
@@ -253,6 +292,29 @@ Public Class Form1
         Me.txtNombre.Focus()
     End Sub
 
-    
    
+    Private Sub txtTablaPrecio1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTablaPrecio1.KeyPress
+        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
+            e.KeyChar = ""
+        End If
+    End Sub
+
+    Private Sub txtTablaPrecio2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTablaPrecio2.KeyPress
+        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
+            e.KeyChar = ""
+        End If
+    End Sub
+
+    Private Sub txtTablaPrecio3_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTablaPrecio3.KeyPress
+        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
+            e.KeyChar = ""
+        End If
+    End Sub
+
+    Private Sub txtTablaPrecio4_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTablaPrecio4.KeyPress
+        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
+            e.KeyChar = ""
+        End If
+    End Sub
+
 End Class

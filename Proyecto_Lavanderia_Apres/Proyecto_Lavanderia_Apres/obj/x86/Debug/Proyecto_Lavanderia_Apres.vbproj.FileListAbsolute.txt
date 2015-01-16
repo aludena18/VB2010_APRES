@@ -59,3 +59,19 @@ C:\Users\TECNICA\Documents\Visual Studio 2010\Projects\Apres\Proyecto_Lavanderia
 C:\Users\TECNICA\Documents\Visual Studio 2010\Projects\Apres\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\TECNICA\Documents\Visual Studio 2010\Projects\Apres\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.CheckBox.resources
 C:\Users\HPdv6000\Documents\Visual Studio 2010\Projects\apres\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.CheckBox.resources
+D:\Proyectos_Varios\VB_2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\Proyecto_Lavanderia_Apres.exe
+D:\Proyectos_Varios\VB_2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\Proyecto_Lavanderia_Apres.xml
+D:\Proyectos_Varios\VB_2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\Proyecto_Lavanderia_Apres.pdb
+D:\Proyectos_Varios\VB_2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\bin\Debug\Proyecto_Lavanderia_Apres.exe
+D:\Proyectos_Varios\VB_2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\bin\Debug\Proyecto_Lavanderia_Apres.pdb
+D:\Proyectos_Varios\VB_2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\bin\Debug\Proyecto_Lavanderia_Apres.xml
+D:\Proyectos_Varios\VB_2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Proyectos_Varios\VB_2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.CheckBox.resources
+D:\Proyectos_Varios\VB_2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.Form1.resources
+D:\Proyectos_Varios\VB_2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.Form2.resources
+D:\Proyectos_Varios\VB_2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.FormEliminarNota.resources
+D:\Proyectos_Varios\VB_2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.Resources.resources
+D:\Proyectos_Varios\VB_2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.Tabla.resources
+D:\Proyectos_Varios\VB_2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\WindowsApplication1.Usuario.resources
+D:\Proyectos_Varios\VB_2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Proyectos_Varios\VB_2010\Proyecto_Lavanderia_Apres\Proyecto_Lavanderia_Apres\obj\x86\Debug\GenerateResource.write.1.tlog

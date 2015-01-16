@@ -3,6 +3,7 @@ Imports System.Windows.Forms
 Imports System.Data
 
 Public Class Metodo
+    Dim wSerie As String
     Dim wId As String
     Dim wNombre As String
     Dim wDireccion As String
@@ -24,11 +25,25 @@ Public Class Metodo
     Dim wDetalle4 As String
     Dim wCantidad4 As String
 
+    Dim wPrecio1 As String
+    Dim wPrecio2 As String
+    Dim wPrecio3 As String
+    Dim wPrecio4 As String
+
     Dim wUserDni As String
     Dim wUserNombre As String
 
     Dim wLabel As String
     Dim wIndiceDetalle As Integer
+
+    Public Property Serie() As String
+        Get
+            Return wSerie
+        End Get
+        Set(ByVal value As String)
+            wSerie = value
+        End Set
+    End Property
 
     Public Property Id() As String
         Get
@@ -210,6 +225,43 @@ Public Class Metodo
         End Set
     End Property
 
+    Public Property Precio1() As String
+        Get
+            Return wPrecio1
+        End Get
+        Set(ByVal value As String)
+            wPrecio1 = value
+        End Set
+    End Property
+
+    Public Property Precio2() As String
+        Get
+            Return wPrecio2
+        End Get
+        Set(ByVal value As String)
+            wPrecio2 = value
+        End Set
+    End Property
+
+    Public Property Precio3() As String
+        Get
+            Return wPrecio3
+        End Get
+        Set(ByVal value As String)
+            wPrecio3 = value
+        End Set
+    End Property
+
+    Public Property Precio4() As String
+        Get
+            Return wPrecio4
+        End Get
+        Set(ByVal value As String)
+            wPrecio4 = value
+        End Set
+    End Property
+
+
     Public Property UserDni() As String
         Get
             Return wUserDni
@@ -257,15 +309,19 @@ Public Class Metodo
         tramitador.Fill(comoda, "Tabla")
         Tablita = comoda.Tables(0)
         MiGrid.DataSource = Tablita
-        MiGrid.Columns(0).HeaderText = "Nota"
-        MiGrid.Columns(0).Width = 40
-        MiGrid.Columns(3).Width = 70
-        MiGrid.Columns(4).Width = 70
-        MiGrid.Columns(7).Width = 80
-        MiGrid.Columns(10).Width = 60
-        MiGrid.Columns(13).Width = 60
-        MiGrid.Columns(16).Width = 60
-        MiGrid.Columns(19).Width = 60
+        MiGrid.Columns(0).HeaderText = "Num Serie"
+        MiGrid.Columns(1).HeaderText = "Num Nota"
+
+        MiGrid.Columns(0).Width = 50    ' numero de serie
+        MiGrid.Columns(1).Width = 50    ' numero de nota
+        MiGrid.Columns(2).Width = 180   ' nombre
+        MiGrid.Columns(3).Width = 280    ' direccion
+        MiGrid.Columns(4).Width = 90    ' telefono
+        MiGrid.Columns(5).Width = 90    ' dni
+        MiGrid.Columns(6).Width = 220   ' recepcion
+        MiGrid.Columns(7).Width = 220   ' entrega
+        MiGrid.Columns(8).Width = 100   ' hora
+
     End Sub
 
     Public Sub obtenerUltimoReg(ByVal conex As OleDbConnection, ByRef miGrilla As DataGridView)
@@ -290,7 +346,8 @@ Public Class Metodo
         Dim comando As New OleDbCommand
 
         vSQL = "INSERT INTO Tabla VALUES("
-        vSQL = vSQL + Me.Id + ",'"
+        vSQL = vSQL + Me.Serie + ",'"
+        vSQL = vSQL + Me.Id + "','"
         vSQL = vSQL + Me.Nombre + "','"
         vSQL = vSQL + Me.Direccion + "','"
         vSQL = vSQL + Me.Telefono + "','"
@@ -302,18 +359,22 @@ Public Class Metodo
         vSQL = vSQL + Me.Prenda1 + "','"
         vSQL = vSQL + Me.Detalle1 + "','"
         vSQL = vSQL + Me.Cantidad1 + "','"
+        vSQL = vSQL + Me.Precio1 + "','"
 
         vSQL = vSQL + Me.Prenda2 + "','"
         vSQL = vSQL + Me.Detalle2 + "','"
         vSQL = vSQL + Me.Cantidad2 + "','"
+        vSQL = vSQL + Me.Precio2 + "','"
 
         vSQL = vSQL + Me.Prenda3 + "','"
         vSQL = vSQL + Me.Detalle3 + "','"
         vSQL = vSQL + Me.Cantidad3 + "','"
+        vSQL = vSQL + Me.Precio3 + "','"
 
         vSQL = vSQL + Me.Prenda4 + "','"
         vSQL = vSQL + Me.Detalle4 + "','"
-        vSQL = vSQL + Me.Cantidad4 + "')"
+        vSQL = vSQL + Me.Cantidad4 + "','"
+        vSQL = vSQL + Me.Precio4 + "')"
 
         comando.Connection = conex
         comando.CommandText = vSQL
@@ -370,7 +431,7 @@ Public Class Metodo
         MiGrilla.DataSource = Tabla
     End Sub
 
-    
+
 
 End Class
 

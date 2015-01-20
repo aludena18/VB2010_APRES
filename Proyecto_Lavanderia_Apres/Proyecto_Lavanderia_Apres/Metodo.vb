@@ -311,17 +311,7 @@ Public Class Metodo
         MiGrid.DataSource = Tablita
         MiGrid.Columns(0).HeaderText = "Num Serie"
         MiGrid.Columns(1).HeaderText = "Num Nota"
-
-        MiGrid.Columns(0).Width = 50    ' numero de serie
-        MiGrid.Columns(1).Width = 50    ' numero de nota
-        MiGrid.Columns(2).Width = 180   ' nombre
-        MiGrid.Columns(3).Width = 280    ' direccion
-        MiGrid.Columns(4).Width = 90    ' telefono
-        MiGrid.Columns(5).Width = 90    ' dni
-        MiGrid.Columns(6).Width = 220   ' recepcion
-        MiGrid.Columns(7).Width = 220   ' entrega
-        MiGrid.Columns(8).Width = 100   ' hora
-
+        ordenaTablaGrilla(MiGrid)
     End Sub
 
     Public Sub obtenerUltimoReg(ByVal conex As OleDbConnection, ByRef miGrilla As DataGridView)
@@ -336,7 +326,22 @@ Public Class Metodo
         Tablita = comoda.Tables(0)
         miGrilla.DataSource = Tablita
         miGrilla.Columns(0).HeaderText = "Nota"
-        miGrilla.Columns(0).Width = 40
+        ordenaTablaGrilla(miGrilla)
+
+    End Sub
+
+    Public Sub obtenerUltimaSerie(ByVal conex As OleDbConnection, ByRef miGrilla As DataGridView)
+
+        Dim Tablita As New System.Data.DataTable()
+        Dim cadena As String
+        'cadena = "Select * from Tabla ORDER BY Id DESC"
+        cadena = "Select max(Serie) from Tabla"
+        Dim tramitador As New OleDbDataAdapter(cadena, conex)
+        Dim comoda As New System.Data.DataSet()
+        tramitador.Fill(comoda, "Tabla")
+        Tablita = comoda.Tables(0)
+        miGrilla.DataSource = Tablita
+        ordenaTablaGrilla(miGrilla)
 
     End Sub
 
@@ -395,14 +400,21 @@ Public Class Metodo
         Tablita = comoda.Tables(0)
         MiGrid.DataSource = Tablita
         MiGrid.Columns(0).HeaderText = "Nota"
-        MiGrid.Columns(0).Width = 40
-        MiGrid.Columns(3).Width = 70
-        MiGrid.Columns(4).Width = 70
-        MiGrid.Columns(7).Width = 80
-        MiGrid.Columns(10).Width = 60
-        MiGrid.Columns(13).Width = 60
-        MiGrid.Columns(16).Width = 60
-        MiGrid.Columns(19).Width = 60
+        ordenaTablaGrilla(MiGrid)
+    End Sub
+
+    Public Sub BuscarDni(ByVal conex As OleDbConnection, ByRef MiGrid As DataGridView)
+        Dim Tablita As New System.Data.DataTable()
+        Dim cadena As String
+        cadena = "Select * from Tabla WHERE Dni='"
+        cadena = cadena + Me.Dni + "' "
+        cadena = cadena + "ORDER BY Id DESC"
+        Dim tramitador As New OleDbDataAdapter(cadena, conex)
+        Dim comoda As New System.Data.DataSet()
+        tramitador.Fill(comoda, "Tabla")
+        Tablita = comoda.Tables(0)
+        MiGrid.DataSource = Tablita
+        ordenaTablaGrilla(MiGrid)
     End Sub
 
     Public Sub Eliminar(ByVal conex As OleDbConnection)
@@ -432,6 +444,17 @@ Public Class Metodo
     End Sub
 
 
+    Private Sub ordenaTablaGrilla(ByRef grilla As DataGridView)
+        grilla.Columns(0).Width = 1    ' numero de serie
+        grilla.Columns(1).Width = 80    ' numero de nota
+        grilla.Columns(2).Width = 180   ' nombre
+        grilla.Columns(3).Width = 280    ' direccion
+        grilla.Columns(4).Width = 90    ' telefono
+        grilla.Columns(5).Width = 90    ' dni
+        grilla.Columns(6).Width = 220   ' recepcion
+        grilla.Columns(7).Width = 220   ' entrega
+        grilla.Columns(8).Width = 100   ' hora
+    End Sub
 
 End Class
 

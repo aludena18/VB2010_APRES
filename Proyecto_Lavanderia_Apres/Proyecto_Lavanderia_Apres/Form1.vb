@@ -2,10 +2,13 @@
 Public Class Form1
     Dim vsql As String
     Dim obj As New Metodo
+
     Dim cuentaNota As Integer
     Dim cuentaSerie As Integer
+
     Dim cuentaNotaCadena As String
     Dim cuentaSerieCadena As String
+
     Dim detalleString1 As String
     Dim detalleString2 As String
     Dim detalleString3 As String
@@ -23,51 +26,28 @@ Public Class Form1
 
         Select Case cuentaNota
             Case Is < 10
-                cuentaNotaCadena = "000" + cuentaNota.ToString
+                cuentaNotaCadena = "000000" + cuentaNota.ToString
             Case 10 To 99
-                cuentaNotaCadena = "00" + cuentaNota.ToString
+                cuentaNotaCadena = "00000" + cuentaNota.ToString
             Case 100 To 999
+                cuentaNotaCadena = "0000" + cuentaNota.ToString
+            Case 1000 To 9999
+                cuentaNotaCadena = "000" + cuentaNota.ToString
+            Case 10000 To 99999
+                cuentaNotaCadena = "00" + cuentaNota.ToString
+            Case 100000 To 999999
                 cuentaNotaCadena = "0" + cuentaNota.ToString
+            Case Is > 999999
+                cuentaNotaCadena = cuentaNota.ToString
         End Select
 
+        cuentaSerieCadena = Strings.Left(cuentaNotaCadena, 3)
+        cuentaNotaCadena = Strings.Right(cuentaNota.ToString, 4)
+
         Me.lblNotaId.Text = cuentaNotaCadena
+        Me.lblNotaSerie.Text = cuentaSerieCadena
+
         Me.lblUsuario.Text = nombreUsuario
-    End Sub
-
-    Private Sub txtDni_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtDni.KeyPress
-        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
-            e.KeyChar = ""
-        End If
-    End Sub
-
-    Private Sub txtTelefono_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTelefono.KeyPress
-        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
-            e.KeyChar = ""
-        End If
-    End Sub
-
-    Private Sub txtTablaCant1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTablaCant1.KeyPress
-        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
-            e.KeyChar = ""
-        End If
-    End Sub
-
-    Private Sub txtTablaCant2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTablaCant2.KeyPress
-        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
-            e.KeyChar = ""
-        End If
-    End Sub
-
-    Private Sub txtTablaCant3_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTablaCant3.KeyPress
-        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
-            e.KeyChar = ""
-        End If
-    End Sub
-
-    Private Sub txtTablaCant4_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTablaCant4.KeyPress
-        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
-            e.KeyChar = ""
-        End If
     End Sub
 
     Private Sub BuscarToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuscarToolStripMenuItem.Click
@@ -135,20 +115,37 @@ Public Class Form1
 
         Select Case cuentaNota
             Case Is < 10
-                cuentaNotaCadena = "000" + cuentaNota.ToString
+                cuentaNotaCadena = "000000" + cuentaNota.ToString
             Case 10 To 99
-                cuentaNotaCadena = "00" + cuentaNota.ToString
+                cuentaNotaCadena = "00000" + cuentaNota.ToString
             Case 100 To 999
+                cuentaNotaCadena = "0000" + cuentaNota.ToString
+            Case 1000 To 9999
+                cuentaNotaCadena = "000" + cuentaNota.ToString
+            Case 10000 To 99999
+                cuentaNotaCadena = "00" + cuentaNota.ToString
+            Case 100000 To 999999
                 cuentaNotaCadena = "0" + cuentaNota.ToString
+            Case Is > 999999
+                cuentaNotaCadena = cuentaNota.ToString
         End Select
 
-        Me.lblNotaId.Text = cuentaNotaCadena
+        cuentaSerieCadena = Strings.Left(cuentaNotaCadena, 3)
+        cuentaNotaCadena = Strings.Right(cuentaNota.ToString, 4)
 
-        'Me.lblNotaId.Text = cuentaNota
+        Me.lblNotaId.Text = cuentaNotaCadena
+        Me.lblNotaSerie.Text = cuentaSerieCadena
+
+
         Me.gbDatosCliente.Enabled = True
         Me.gbFechasHora.Enabled = True
         Me.gbRecepcion.Enabled = True
         limpiar()
+    End Sub
+
+    Private Sub ToolStripButton5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton5.Click
+        PrintPreviewDialog1.Document = PrintDocument1
+        PrintPreviewDialog1.ShowDialog()
     End Sub
 
     Private Sub PrintDocument1_PrintPage(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
@@ -214,10 +211,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub ToolStripButton5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton5.Click
-        PrintPreviewDialog1.Document = PrintDocument1
-        PrintPreviewDialog1.ShowDialog()
-    End Sub
+    
 
     Private Sub grabarDatos()
         If Me.txtNombre.Text = "" Then
@@ -230,7 +224,7 @@ Public Class Form1
             MessageBox.Show("¡Debe ingresar por lo menos una prenda y su cantidad!")
         Else
             obj.Serie = "0"
-            obj.Id = Me.lblNotaId.Text
+            obj.Id = cuentaNota.ToString
             obj.Nombre = Me.txtNombre.Text
             obj.Direccion = Me.txtDireccion.Text
             obj.Telefono = Me.txtTelefono.Text
@@ -259,12 +253,9 @@ Public Class Form1
             obj.Detalle4 = Me.txtTablaDetalle4.Text
             obj.Precio4 = Me.txtTablaPrecio4.Text
 
-
-
-
             obj.Ingresar(Module1.miconexion)
             MessageBox.Show("Datos Grabados Correctamente.")
-            cuentaNota = CInt(Me.lblNotaId.Text) + 1
+            cuentaNota = cuentaNota + 1
 
             Me.gbDatosCliente.Enabled = False
             Me.gbFechasHora.Enabled = False
@@ -292,7 +283,43 @@ Public Class Form1
         Me.txtNombre.Focus()
     End Sub
 
-   
+
+    Private Sub txtDni_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtDni.KeyPress
+        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
+            e.KeyChar = ""
+        End If
+    End Sub
+
+    Private Sub txtTelefono_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTelefono.KeyPress
+        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
+            e.KeyChar = ""
+        End If
+    End Sub
+
+    Private Sub txtTablaCant1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTablaCant1.KeyPress
+        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
+            e.KeyChar = ""
+        End If
+    End Sub
+
+    Private Sub txtTablaCant2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTablaCant2.KeyPress
+        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
+            e.KeyChar = ""
+        End If
+    End Sub
+
+    Private Sub txtTablaCant3_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTablaCant3.KeyPress
+        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
+            e.KeyChar = ""
+        End If
+    End Sub
+
+    Private Sub txtTablaCant4_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTablaCant4.KeyPress
+        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
+            e.KeyChar = ""
+        End If
+    End Sub
+
     Private Sub txtTablaPrecio1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtTablaPrecio1.KeyPress
         If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
             e.KeyChar = ""

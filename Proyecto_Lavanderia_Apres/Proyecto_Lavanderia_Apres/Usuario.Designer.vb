@@ -32,19 +32,19 @@ Partial Class Usuario
         '
         'txtDni
         '
-        Me.txtDni.Location = New System.Drawing.Point(91, 37)
-        Me.txtDni.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDni.Location = New System.Drawing.Point(121, 46)
+        Me.txtDni.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtDni.MaxLength = 8
         Me.txtDni.Name = "txtDni"
-        Me.txtDni.Size = New System.Drawing.Size(133, 20)
+        Me.txtDni.Size = New System.Drawing.Size(176, 22)
         Me.txtDni.TabIndex = 0
         '
         'lblDni
         '
         Me.lblDni.AutoSize = True
-        Me.lblDni.Location = New System.Drawing.Point(4, 40)
-        Me.lblDni.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblDni.Location = New System.Drawing.Point(5, 49)
         Me.lblDni.Name = "lblDni"
-        Me.lblDni.Size = New System.Drawing.Size(84, 13)
+        Me.lblDni.Size = New System.Drawing.Size(109, 17)
         Me.lblDni.TabIndex = 1
         Me.lblDni.Text = "Ingrese su DNI :"
         '
@@ -52,11 +52,11 @@ Partial Class Usuario
         '
         Me.GroupBox1.Controls.Add(Me.lblDni)
         Me.GroupBox1.Controls.Add(Me.txtDni)
-        Me.GroupBox1.Location = New System.Drawing.Point(41, 10)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Location = New System.Drawing.Point(55, 12)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(230, 81)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(307, 100)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "LOGIN"
@@ -65,21 +65,23 @@ Partial Class Usuario
         '
         Me.dgvTabla.AllowUserToAddRows = False
         Me.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvTabla.Location = New System.Drawing.Point(304, 47)
+        Me.dgvTabla.Location = New System.Drawing.Point(405, 58)
+        Me.dgvTabla.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvTabla.Name = "dgvTabla"
         Me.dgvTabla.ReadOnly = True
+        Me.dgvTabla.RowTemplate.Height = 24
         Me.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvTabla.Size = New System.Drawing.Size(324, 88)
+        Me.dgvTabla.Size = New System.Drawing.Size(432, 108)
         Me.dgvTabla.TabIndex = 3
         '
         'Usuario
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(298, 101)
+        Me.ClientSize = New System.Drawing.Size(397, 124)
         Me.Controls.Add(Me.dgvTabla)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Usuario"
         Me.Text = "Usuario"
         Me.GroupBox1.ResumeLayout(False)

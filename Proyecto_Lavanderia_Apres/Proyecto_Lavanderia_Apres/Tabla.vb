@@ -4,6 +4,8 @@ Public Class Tabla
     Dim vsql As String
     Dim obj As New Metodo
 
+    Dim cadenaDni As String
+
     'Private Sub Tabla_Activated(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Activated
     '    obj.CargarGrid(Module1.miconexion, Me.DataGridView1)
     'End Sub
@@ -31,6 +33,18 @@ Public Class Tabla
         Me.txtBuscarNota.Text = ""
         Me.txtBuscarNota.Focus()
 
+    End Sub
+
+    Private Sub txtBuscarDni_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtBuscarDni.KeyPress
+        cadenaDni = cadenaDni + e.KeyChar
+        If cadenaDni.Length = 8 Then
+            obj.Dni = cadenaDni.Trim
+            obj.BuscarDni(Module1.miconexion, Me.DataGridView1)
+            cadenaDni = ""
+            If Me.DataGridView1.RowCount = 0 Then
+                MessageBox.Show("No existe registro DNI de este cliente")
+            End If
+        End If
     End Sub
 
     Private Sub mensaje()
@@ -82,5 +96,5 @@ Public Class Tabla
         FormEliminarNota.Show()
     End Sub
 
-   
+    
 End Class

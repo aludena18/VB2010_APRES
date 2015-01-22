@@ -326,22 +326,6 @@ Public Class Metodo
         Tablita = comoda.Tables(0)
         miGrilla.DataSource = Tablita
         miGrilla.Columns(0).HeaderText = "Nota"
-        ordenaTablaGrilla(miGrilla)
-
-    End Sub
-
-    Public Sub obtenerUltimaSerie(ByVal conex As OleDbConnection, ByRef miGrilla As DataGridView)
-
-        Dim Tablita As New System.Data.DataTable()
-        Dim cadena As String
-        'cadena = "Select * from Tabla ORDER BY Id DESC"
-        cadena = "Select max(Serie) from Tabla"
-        Dim tramitador As New OleDbDataAdapter(cadena, conex)
-        Dim comoda As New System.Data.DataSet()
-        tramitador.Fill(comoda, "Tabla")
-        Tablita = comoda.Tables(0)
-        miGrilla.DataSource = Tablita
-        ordenaTablaGrilla(miGrilla)
 
     End Sub
 

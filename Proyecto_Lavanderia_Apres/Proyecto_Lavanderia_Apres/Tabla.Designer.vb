@@ -25,35 +25,39 @@ Partial Class Tabla
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.txtBuscarNota = New System.Windows.Forms.TextBox()
-        Me.btnBuscarNota = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarNotaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarNotaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.txtBuscarDni = New System.Windows.Forms.TextBox()
+        Me.txtBuscarSerie = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.DataGridView1)
-        Me.GroupBox3.Location = New System.Drawing.Point(19, 172)
+        Me.GroupBox3.Location = New System.Drawing.Point(19, 178)
         Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Size = New System.Drawing.Size(947, 271)
         Me.GroupBox3.TabIndex = 32
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "NOTAS DE RECEPCION"
+        Me.GroupBox3.Text = "LISTADO DE NOTAS DE RECEPCION"
         '
         'DataGridView1
         '
@@ -70,35 +74,13 @@ Partial Class Tabla
         '
         'txtBuscarNota
         '
-        Me.txtBuscarNota.Location = New System.Drawing.Point(100, 41)
+        Me.txtBuscarNota.Location = New System.Drawing.Point(264, 24)
         Me.txtBuscarNota.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtBuscarNota.MaxLength = 4
         Me.txtBuscarNota.Name = "txtBuscarNota"
-        Me.txtBuscarNota.Size = New System.Drawing.Size(132, 22)
-        Me.txtBuscarNota.TabIndex = 33
+        Me.txtBuscarNota.Size = New System.Drawing.Size(97, 22)
+        Me.txtBuscarNota.TabIndex = 36
         Me.txtBuscarNota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'btnBuscarNota
-        '
-        Me.btnBuscarNota.Location = New System.Drawing.Point(260, 38)
-        Me.btnBuscarNota.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnBuscarNota.Name = "btnBuscarNota"
-        Me.btnBuscarNota.Size = New System.Drawing.Size(100, 28)
-        Me.btnBuscarNota.TabIndex = 34
-        Me.btnBuscarNota.Text = "Buscar"
-        Me.btnBuscarNota.UseVisualStyleBackColor = True
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.btnBuscarNota)
-        Me.GroupBox1.Controls.Add(Me.txtBuscarNota)
-        Me.GroupBox1.Location = New System.Drawing.Point(523, 60)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(443, 94)
-        Me.GroupBox1.TabIndex = 35
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Número de Nota de Recepción"
         '
         'MenuStrip1
         '
@@ -141,32 +123,9 @@ Partial Class Tabla
         Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(169, 24)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.txtBuscarDni)
-        Me.GroupBox2.Location = New System.Drawing.Point(19, 60)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(443, 94)
-        Me.GroupBox2.TabIndex = 37
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Número de DNI"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(260, 38)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 28)
-        Me.Button1.TabIndex = 34
-        Me.Button1.Text = "Buscar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'txtBuscarDni
         '
-        Me.txtBuscarDni.Location = New System.Drawing.Point(100, 41)
+        Me.txtBuscarDni.Location = New System.Drawing.Point(167, 23)
         Me.txtBuscarDni.Margin = New System.Windows.Forms.Padding(4)
         Me.txtBuscarDni.MaxLength = 8
         Me.txtBuscarDni.Name = "txtBuscarDni"
@@ -174,13 +133,87 @@ Partial Class Tabla
         Me.txtBuscarDni.TabIndex = 33
         Me.txtBuscarDni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'txtBuscarSerie
+        '
+        Me.txtBuscarSerie.Location = New System.Drawing.Point(176, 24)
+        Me.txtBuscarSerie.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtBuscarSerie.MaxLength = 3
+        Me.txtBuscarSerie.Name = "txtBuscarSerie"
+        Me.txtBuscarSerie.Size = New System.Drawing.Size(61, 22)
+        Me.txtBuscarSerie.TabIndex = 35
+        Me.txtBuscarSerie.Text = "000"
+        Me.txtBuscarSerie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(244, 27)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(13, 17)
+        Me.Label1.TabIndex = 34
+        Me.Label1.Text = "-"
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControl1.Location = New System.Drawing.Point(19, 48)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(451, 100)
+        Me.TabControl1.TabIndex = 38
+        '
+        'TabPage1
+        '
+        Me.TabPage1.BackColor = System.Drawing.Color.Transparent
+        Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.Controls.Add(Me.txtBuscarNota)
+        Me.TabPage1.Controls.Add(Me.Label1)
+        Me.TabPage1.Controls.Add(Me.txtBuscarSerie)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(443, 71)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Nota de Recepción"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(41, 27)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(114, 17)
+        Me.Label2.TabIndex = 36
+        Me.Label2.Text = "Buscar N° Nota :"
+        '
+        'TabPage2
+        '
+        Me.TabPage2.BackColor = System.Drawing.Color.Transparent
+        Me.TabPage2.Controls.Add(Me.Label3)
+        Me.TabPage2.Controls.Add(Me.txtBuscarDni)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(443, 71)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "DNI"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(41, 26)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(87, 17)
+        Me.Label3.TabIndex = 37
+        Me.Label3.Text = "Buscar DNI :"
+        '
         'Tabla
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(983, 465)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(983, 468)
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -190,12 +223,13 @@ Partial Class Tabla
         Me.Text = "Buscar Nota de Entrega"
         Me.GroupBox3.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -203,15 +237,18 @@ Partial Class Tabla
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents txtBuscarNota As System.Windows.Forms.TextBox
-    Friend WithEvents btnBuscarNota As System.Windows.Forms.Button
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents ArchivoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EditarNotaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EliminarNotaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents txtBuscarDni As System.Windows.Forms.TextBox
+    Friend WithEvents txtBuscarSerie As System.Windows.Forms.TextBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class

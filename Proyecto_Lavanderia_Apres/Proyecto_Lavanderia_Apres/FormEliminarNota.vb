@@ -9,7 +9,7 @@ Public Class FormEliminarNota
         If Me.txtEliminarNota.Text = "" Then
             MessageBox.Show("Debe Ingresar un Número de Nota a Eliminar.")
         Else
-            obj.Id = Me.txtEliminarNota.Text
+            obj.Id = CInt(Me.txtEliminarSerie.Text.Trim).ToString + Me.txtEliminarNota.Text.Trim
             obj.BuscarNota(Module1.miconexion, Me.DataGridView1)
             If Me.DataGridView1.RowCount > 0 Then
                 obj.Eliminar(Module1.miconexion)

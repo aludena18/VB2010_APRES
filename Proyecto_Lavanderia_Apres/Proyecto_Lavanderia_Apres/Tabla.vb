@@ -4,30 +4,37 @@ Public Class Tabla
     Dim vsql As String
     Dim obj As New Metodo
     Dim cadenaDni As String
+    Dim cadenaNota As String
 
     Private Sub Tabla_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         obj.CargarGrid(Module1.miconexion, Me.DataGridView1)
         Me.txtBuscarDni.Focus()
     End Sub
 
-    Private Sub btnBuscarNota_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscarNota.Click
-
-        If Me.txtBuscarNota.Text = "" Then
-            obj.CargarGrid(Module1.miconexion, Me.DataGridView1)
+    Private Sub txtBuscarNota_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtBuscarNota.KeyPress
+        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
+            e.KeyChar = ""
         Else
-            obj.Id = Me.txtBuscarNota.Text
-            obj.BuscarNota(Module1.miconexion, Me.DataGridView1)
-            If Me.DataGridView1.RowCount > 0 Then
-                'MessageBox.Show(Me.DataGridView1.RowCount.ToString)
-                'mensaje()
-            Else
-                MessageBox.Show("No existe registro de esta Nota de Entrega.")
+            cadenaNota = Me.txtBuscarNota.Text.Trim + e.KeyChar
+            If Strings.Right(cadenaNota, 1) = Chr(8).ToString And Me.txtBuscarNota.Text.Length > 0 Then
+                cadenaNota = Strings.Left(cadenaNota, cadenaNota.Length - 2)
             End If
+
+            If cadenaNota = Chr(8).ToString Then
+                cadenaNota = ""
+            End If
+
+            Select Case cadenaNota.Length
+                Case 0
+                    obj.CargarGrid(Module1.miconexion, Me.DataGridView1)
+                Case 4
+                    obj.Id = CInt(Me.txtBuscarSerie.Text.Trim + cadenaNota).ToString
+                    obj.BuscarNota(Module1.miconexion, Me.DataGridView1)
+                Case Else
+                    obj.Id = "99999999"         'va buscar un registro que nunca va existir para no perder la vista de la tabla de la BD
+                    obj.BuscarNota(Module1.miconexion, Me.DataGridView1)
+            End Select
         End If
-
-        Me.txtBuscarNota.Text = ""
-        Me.txtBuscarNota.Focus()
-
     End Sub
 
     Private Sub txtBuscarDni_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtBuscarDni.KeyPress
@@ -79,15 +86,8 @@ Public Class Tabla
         Me.Close()
     End Sub
 
-    Private Sub txtBuscarNota_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtBuscarNota.KeyPress
-        If InStr(1, "0123456789" & Chr(8), e.KeyChar) = 0 Then
-            e.KeyChar = ""
-        End If
-    End Sub
-
     Private Sub EliminarNotaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EliminarNotaToolStripMenuItem.Click
         FormEliminarNota.Show()
     End Sub
 
-    
 End Class

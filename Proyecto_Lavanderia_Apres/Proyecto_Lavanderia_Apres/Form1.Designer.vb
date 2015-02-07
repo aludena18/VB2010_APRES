@@ -130,9 +130,9 @@ Partial Class Form1
         'Label13
         '
         Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label13.Location = New System.Drawing.Point(268, 1)
+        Label13.Location = New System.Drawing.Point(266, 1)
         Label13.Name = "Label13"
-        Label13.Size = New System.Drawing.Size(51, 34)
+        Label13.Size = New System.Drawing.Size(54, 34)
         Label13.TabIndex = 43
         Label13.Text = "PRECIO"
         Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -351,10 +351,10 @@ Partial Class Form1
         Me.TableLayoutPanel1.BackColor = System.Drawing.Color.White
         Me.TableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
         Me.TableLayoutPanel1.ColumnCount = 4
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.78322!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.21678!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 57.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 391.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.32061!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.67939!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 390.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label10, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label12, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txtTablaPrenda1, 1, 1)
@@ -391,9 +391,9 @@ Partial Class Form1
         '
         Me.Label10.BackColor = System.Drawing.Color.White
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(49, 1)
+        Me.Label10.Location = New System.Drawing.Point(52, 1)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(212, 34)
+        Me.Label10.Size = New System.Drawing.Size(207, 34)
         Me.Label10.TabIndex = 41
         Me.Label10.Text = "PRENDAS"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -404,7 +404,7 @@ Partial Class Form1
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(4, 1)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(38, 34)
+        Me.Label12.Size = New System.Drawing.Size(41, 34)
         Me.Label12.TabIndex = 43
         Me.Label12.Text = "CANT"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -414,10 +414,10 @@ Partial Class Form1
         Me.txtTablaPrenda1.BackColor = System.Drawing.Color.White
         Me.txtTablaPrenda1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTablaPrenda1.ForeColor = System.Drawing.Color.Black
-        Me.txtTablaPrenda1.Location = New System.Drawing.Point(49, 39)
+        Me.txtTablaPrenda1.Location = New System.Drawing.Point(52, 39)
         Me.txtTablaPrenda1.Multiline = True
         Me.txtTablaPrenda1.Name = "txtTablaPrenda1"
-        Me.txtTablaPrenda1.Size = New System.Drawing.Size(212, 28)
+        Me.txtTablaPrenda1.Size = New System.Drawing.Size(207, 28)
         Me.txtTablaPrenda1.TabIndex = 9
         Me.txtTablaPrenda1.Text = "Toallas"
         '
@@ -426,10 +426,10 @@ Partial Class Form1
         Me.txtTablaPrenda2.BackColor = System.Drawing.Color.White
         Me.txtTablaPrenda2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTablaPrenda2.ForeColor = System.Drawing.Color.Black
-        Me.txtTablaPrenda2.Location = New System.Drawing.Point(49, 74)
+        Me.txtTablaPrenda2.Location = New System.Drawing.Point(52, 74)
         Me.txtTablaPrenda2.Multiline = True
         Me.txtTablaPrenda2.Name = "txtTablaPrenda2"
-        Me.txtTablaPrenda2.Size = New System.Drawing.Size(212, 28)
+        Me.txtTablaPrenda2.Size = New System.Drawing.Size(207, 28)
         Me.txtTablaPrenda2.TabIndex = 12
         '
         'txtTablaCant2
@@ -440,7 +440,7 @@ Partial Class Form1
         Me.txtTablaCant2.Location = New System.Drawing.Point(4, 74)
         Me.txtTablaCant2.Multiline = True
         Me.txtTablaCant2.Name = "txtTablaCant2"
-        Me.txtTablaCant2.Size = New System.Drawing.Size(38, 28)
+        Me.txtTablaCant2.Size = New System.Drawing.Size(41, 28)
         Me.txtTablaCant2.TabIndex = 11
         Me.txtTablaCant2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -449,10 +449,10 @@ Partial Class Form1
         Me.txtTablaPrenda3.BackColor = System.Drawing.Color.White
         Me.txtTablaPrenda3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTablaPrenda3.ForeColor = System.Drawing.Color.Black
-        Me.txtTablaPrenda3.Location = New System.Drawing.Point(49, 109)
+        Me.txtTablaPrenda3.Location = New System.Drawing.Point(52, 109)
         Me.txtTablaPrenda3.Multiline = True
         Me.txtTablaPrenda3.Name = "txtTablaPrenda3"
-        Me.txtTablaPrenda3.Size = New System.Drawing.Size(212, 28)
+        Me.txtTablaPrenda3.Size = New System.Drawing.Size(207, 28)
         Me.txtTablaPrenda3.TabIndex = 15
         '
         'txtTablaCant3
@@ -463,7 +463,7 @@ Partial Class Form1
         Me.txtTablaCant3.Location = New System.Drawing.Point(4, 109)
         Me.txtTablaCant3.Multiline = True
         Me.txtTablaCant3.Name = "txtTablaCant3"
-        Me.txtTablaCant3.Size = New System.Drawing.Size(38, 28)
+        Me.txtTablaCant3.Size = New System.Drawing.Size(41, 28)
         Me.txtTablaCant3.TabIndex = 14
         Me.txtTablaCant3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -472,10 +472,10 @@ Partial Class Form1
         Me.txtTablaPrenda4.BackColor = System.Drawing.Color.White
         Me.txtTablaPrenda4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTablaPrenda4.ForeColor = System.Drawing.Color.Black
-        Me.txtTablaPrenda4.Location = New System.Drawing.Point(49, 144)
+        Me.txtTablaPrenda4.Location = New System.Drawing.Point(52, 144)
         Me.txtTablaPrenda4.Multiline = True
         Me.txtTablaPrenda4.Name = "txtTablaPrenda4"
-        Me.txtTablaPrenda4.Size = New System.Drawing.Size(212, 31)
+        Me.txtTablaPrenda4.Size = New System.Drawing.Size(207, 31)
         Me.txtTablaPrenda4.TabIndex = 18
         '
         'txtTablaCant4
@@ -486,7 +486,7 @@ Partial Class Form1
         Me.txtTablaCant4.Location = New System.Drawing.Point(4, 144)
         Me.txtTablaCant4.Multiline = True
         Me.txtTablaCant4.Name = "txtTablaCant4"
-        Me.txtTablaCant4.Size = New System.Drawing.Size(38, 31)
+        Me.txtTablaCant4.Size = New System.Drawing.Size(41, 31)
         Me.txtTablaCant4.TabIndex = 17
         Me.txtTablaCant4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -498,7 +498,7 @@ Partial Class Form1
         Me.txtTablaCant1.Location = New System.Drawing.Point(4, 39)
         Me.txtTablaCant1.Multiline = True
         Me.txtTablaCant1.Name = "txtTablaCant1"
-        Me.txtTablaCant1.Size = New System.Drawing.Size(38, 28)
+        Me.txtTablaCant1.Size = New System.Drawing.Size(41, 28)
         Me.txtTablaCant1.TabIndex = 8
         Me.txtTablaCant1.Text = "20"
         Me.txtTablaCant1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -507,7 +507,7 @@ Partial Class Form1
         '
         Me.Label11.BackColor = System.Drawing.Color.White
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(326, 1)
+        Me.Label11.Location = New System.Drawing.Point(327, 1)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(369, 34)
         Me.Label11.TabIndex = 42
@@ -521,7 +521,7 @@ Partial Class Form1
         Me.txtTablaDetalle1.Enabled = False
         Me.txtTablaDetalle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTablaDetalle1.ForeColor = System.Drawing.Color.Black
-        Me.txtTablaDetalle1.Location = New System.Drawing.Point(326, 39)
+        Me.txtTablaDetalle1.Location = New System.Drawing.Point(327, 39)
         Me.txtTablaDetalle1.Multiline = True
         Me.txtTablaDetalle1.Name = "txtTablaDetalle1"
         Me.txtTablaDetalle1.Size = New System.Drawing.Size(369, 28)
@@ -529,11 +529,11 @@ Partial Class Form1
         '
         'txtTablaPrecio1
         '
-        Me.txtTablaPrecio1.Location = New System.Drawing.Point(267, 38)
+        Me.txtTablaPrecio1.Location = New System.Drawing.Point(265, 38)
         Me.txtTablaPrecio1.Margin = New System.Windows.Forms.Padding(2)
         Me.txtTablaPrecio1.Multiline = True
         Me.txtTablaPrecio1.Name = "txtTablaPrecio1"
-        Me.txtTablaPrecio1.Size = New System.Drawing.Size(53, 30)
+        Me.txtTablaPrecio1.Size = New System.Drawing.Size(56, 30)
         Me.txtTablaPrecio1.TabIndex = 10
         Me.txtTablaPrecio1.Text = "15"
         Me.txtTablaPrecio1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -545,7 +545,7 @@ Partial Class Form1
         Me.txtTablaDetalle2.Enabled = False
         Me.txtTablaDetalle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTablaDetalle2.ForeColor = System.Drawing.Color.Black
-        Me.txtTablaDetalle2.Location = New System.Drawing.Point(326, 74)
+        Me.txtTablaDetalle2.Location = New System.Drawing.Point(327, 74)
         Me.txtTablaDetalle2.Multiline = True
         Me.txtTablaDetalle2.Name = "txtTablaDetalle2"
         Me.txtTablaDetalle2.Size = New System.Drawing.Size(369, 28)
@@ -553,11 +553,11 @@ Partial Class Form1
         '
         'txtTablaPrecio2
         '
-        Me.txtTablaPrecio2.Location = New System.Drawing.Point(267, 73)
+        Me.txtTablaPrecio2.Location = New System.Drawing.Point(265, 73)
         Me.txtTablaPrecio2.Margin = New System.Windows.Forms.Padding(2)
         Me.txtTablaPrecio2.Multiline = True
         Me.txtTablaPrecio2.Name = "txtTablaPrecio2"
-        Me.txtTablaPrecio2.Size = New System.Drawing.Size(53, 30)
+        Me.txtTablaPrecio2.Size = New System.Drawing.Size(56, 30)
         Me.txtTablaPrecio2.TabIndex = 13
         Me.txtTablaPrecio2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -568,7 +568,7 @@ Partial Class Form1
         Me.txtTablaDetalle3.Enabled = False
         Me.txtTablaDetalle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTablaDetalle3.ForeColor = System.Drawing.Color.Black
-        Me.txtTablaDetalle3.Location = New System.Drawing.Point(326, 109)
+        Me.txtTablaDetalle3.Location = New System.Drawing.Point(327, 109)
         Me.txtTablaDetalle3.Multiline = True
         Me.txtTablaDetalle3.Name = "txtTablaDetalle3"
         Me.txtTablaDetalle3.Size = New System.Drawing.Size(369, 28)
@@ -576,11 +576,11 @@ Partial Class Form1
         '
         'txtTablaPrecio3
         '
-        Me.txtTablaPrecio3.Location = New System.Drawing.Point(267, 108)
+        Me.txtTablaPrecio3.Location = New System.Drawing.Point(265, 108)
         Me.txtTablaPrecio3.Margin = New System.Windows.Forms.Padding(2)
         Me.txtTablaPrecio3.Multiline = True
         Me.txtTablaPrecio3.Name = "txtTablaPrecio3"
-        Me.txtTablaPrecio3.Size = New System.Drawing.Size(53, 30)
+        Me.txtTablaPrecio3.Size = New System.Drawing.Size(56, 30)
         Me.txtTablaPrecio3.TabIndex = 16
         Me.txtTablaPrecio3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -591,7 +591,7 @@ Partial Class Form1
         Me.txtTablaDetalle4.Enabled = False
         Me.txtTablaDetalle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTablaDetalle4.ForeColor = System.Drawing.Color.Black
-        Me.txtTablaDetalle4.Location = New System.Drawing.Point(326, 144)
+        Me.txtTablaDetalle4.Location = New System.Drawing.Point(327, 144)
         Me.txtTablaDetalle4.Multiline = True
         Me.txtTablaDetalle4.Name = "txtTablaDetalle4"
         Me.txtTablaDetalle4.Size = New System.Drawing.Size(369, 31)
@@ -599,11 +599,11 @@ Partial Class Form1
         '
         'txtTablaPrecio4
         '
-        Me.txtTablaPrecio4.Location = New System.Drawing.Point(267, 143)
+        Me.txtTablaPrecio4.Location = New System.Drawing.Point(265, 143)
         Me.txtTablaPrecio4.Margin = New System.Windows.Forms.Padding(2)
         Me.txtTablaPrecio4.Multiline = True
         Me.txtTablaPrecio4.Name = "txtTablaPrecio4"
-        Me.txtTablaPrecio4.Size = New System.Drawing.Size(53, 30)
+        Me.txtTablaPrecio4.Size = New System.Drawing.Size(56, 33)
         Me.txtTablaPrecio4.TabIndex = 19
         Me.txtTablaPrecio4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '

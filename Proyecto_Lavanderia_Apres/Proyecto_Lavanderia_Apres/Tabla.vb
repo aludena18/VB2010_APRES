@@ -52,6 +52,12 @@ Public Class Tabla
 
     End Sub
 
+    Private Sub dtpBuscarFecha_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpBuscarFecha.ValueChanged
+        obj.Recepcion = Me.dtpBuscarFecha.Text.Trim
+        obj.BuscarFecha(Module1.miconexion, Me.DataGridView1)
+
+    End Sub
+
     Private Sub DataGridView1_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
         mensaje()
     End Sub

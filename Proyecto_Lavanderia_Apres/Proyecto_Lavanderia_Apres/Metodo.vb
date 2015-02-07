@@ -401,6 +401,20 @@ Public Class Metodo
         ordenaTablaGrilla(MiGrid)
     End Sub
 
+    Public Sub BuscarFecha(ByVal conex As OleDbConnection, ByRef MiGrid As DataGridView)
+        Dim Tablita As New System.Data.DataTable()
+        Dim cadena As String
+        cadena = "Select * from Tabla WHERE Recepcion='"
+        cadena = cadena + Me.Recepcion.Trim + "' "
+        cadena = cadena + "ORDER BY Id DESC"
+        Dim tramitador As New OleDbDataAdapter(cadena, conex)
+        Dim comoda As New System.Data.DataSet()
+        tramitador.Fill(comoda, "Tabla")
+        Tablita = comoda.Tables(0)
+        MiGrid.DataSource = Tablita
+        ordenaTablaGrilla(MiGrid)
+    End Sub
+
     Public Sub Eliminar(ByVal conex As OleDbConnection)
 
         Dim vsql As String

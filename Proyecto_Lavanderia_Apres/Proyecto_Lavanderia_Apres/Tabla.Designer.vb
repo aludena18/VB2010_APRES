@@ -43,6 +43,9 @@ Partial Class Tabla
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnActualizar = New System.Windows.Forms.ToolStripButton()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.dtpBuscarFecha = New System.Windows.Forms.DateTimePicker()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -50,6 +53,7 @@ Partial Class Tabla
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox3
@@ -163,12 +167,13 @@ Partial Class Tabla
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(18, 67)
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(338, 81)
+        Me.TabControl1.Size = New System.Drawing.Size(345, 81)
         Me.TabControl1.TabIndex = 38
         '
         'TabPage1
@@ -238,6 +243,34 @@ Partial Class Tabla
         Me.btnActualizar.Size = New System.Drawing.Size(30, 30)
         Me.btnActualizar.ToolTipText = "Actualizar"
         '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.Label4)
+        Me.TabPage3.Controls.Add(Me.dtpBuscarFecha)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(337, 55)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Fecha"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'dtpBuscarFecha
+        '
+        Me.dtpBuscarFecha.Location = New System.Drawing.Point(124, 21)
+        Me.dtpBuscarFecha.Name = "dtpBuscarFecha"
+        Me.dtpBuscarFecha.Size = New System.Drawing.Size(200, 19)
+        Me.dtpBuscarFecha.TabIndex = 0
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(6, 26)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(111, 13)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Fecha de recepción : "
+        '
         'Tabla
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -262,6 +295,8 @@ Partial Class Tabla
         Me.TabPage2.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -286,4 +321,7 @@ Partial Class Tabla
     Friend WithEvents ActualizarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
     Friend WithEvents btnActualizar As System.Windows.Forms.ToolStripButton
+    Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents dtpBuscarFecha As System.Windows.Forms.DateTimePicker
 End Class
